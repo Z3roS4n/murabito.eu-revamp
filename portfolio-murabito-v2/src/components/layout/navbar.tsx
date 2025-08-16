@@ -20,7 +20,7 @@ const Navbar = () => {
         <div className={`flex flex-row justify-between m-6 p-3 pl-6 pr-6 rounded-2xl glass not-lg:justify-end not-sm:hidden`}>
           <div className="flex flex-row justify-center gap-6 w-full">
             {Object.entries(navLinks).map(([key, value]) => (
-              <Link className='link-primary' href={`#${key}`} key={key}>{value}</Link>
+              <Link className='link-primary text-sm' href={`#${key}`} key={key}>{value}</Link>
             ))}
           </div>
         </div>
@@ -33,7 +33,7 @@ const Navbar = () => {
             { 
               <>
                 {Object.entries(navLinks).map(([key, value]) => (
-                  <Link className='link-primary mt-5' href={`#${key}`} key={key}>{value}</Link>
+                  <Link className='link-primary mt-5 text-sm' href={`#${key}`} key={key}>{value}</Link>
                 ))}
               </> 
             }

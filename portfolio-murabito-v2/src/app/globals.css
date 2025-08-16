@@ -63,5 +63,5 @@ html {
 }
 
 .heading-text-hero {
-  @apply lg:text-7xl text-4xl text-center font-black tracking-wide lg:leading-25 leading-12;
+  @apply lg:text-7xl text-5xl text-center font-black tracking-wide lg:leading-25 leading-15;
 }
