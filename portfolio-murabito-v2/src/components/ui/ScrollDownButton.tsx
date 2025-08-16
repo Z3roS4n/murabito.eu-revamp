@@ -1,0 +1,16 @@
+import { ChevronDown } from "lucide-react";
+import Link from "next/link";
+
+interface ScrollDownButton {
+  targetId: string;
+}
+
+const ScrollDownButton = ({ targetId }: ScrollDownButton) => {
+  return (
+    <Link className="block text-8xl scale-200 mb-10 hover:mb-7 hover-trans-long glass" href={targetId}>
+      <ChevronDown/>
+    </Link>
+  );
+}
+
+export default ScrollDownButton;

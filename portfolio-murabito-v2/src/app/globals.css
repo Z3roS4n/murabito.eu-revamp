@@ -25,9 +25,17 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* TRANSITIONS */
 @utility hover-trans {
   @apply transition-all duration-150;
+}
+
+@utility hover-trans-long {
+  @apply transition-all duration-450;
 }
 
 /* CUSTOM UI CLASSES */
@@ -37,9 +45,23 @@ body {
 }
 
 .link-primary {
-  @apply flex flex-row items-center gap-2 text-blue-700 font-bold hover:text-blue-300 hover-trans;
+  @apply flex flex-row items-center gap-2 text-white font-bold hover:text-blue-300 hover-trans;
 }
 
 .link-secondary {
   @apply flex flex-row items-center gap-2 text-blue-300 font-bold hover:text-blue-700 hover-trans;
+}
+
+
+.glass {
+  @apply bg-white/10 dark:bg-white/5
+          border border-white/20
+          shadow-lg
+          backdrop-blur-md
+          saturate-150
+          rounded-2xl;
+}
+
+.heading-text-hero {
+  @apply lg:text-7xl text-4xl text-center font-black tracking-wide lg:leading-25 leading-12;
 }
