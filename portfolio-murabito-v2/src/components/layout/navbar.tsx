@@ -9,7 +9,7 @@ const Navbar = () => {
   
   const navLinks: Record<string, ReactNode> = {
     'home': <><Home/>HOME</>,
-    'about': <><HandMetal/>ABOUT ME</>,
+    'aboutme': <><HandMetal/>ABOUT ME</>,
     'projects': <><Boxes/>PROJECTS</>,
     'contact': <><Phone/>CONTACTS</>
   }

@@ -53,7 +53,7 @@ const ParticleBackground = () => {
 
   if (!init) return null;
 
-  return <Particles className="w-full h-150 lg:min-h-screen object-cover transform transition-transform duration-500 
+  return <Particles className="w-full min-h-screen object-cover transform transition-transform duration-500 
                sm:scale-100 scale-125" id="tsparticles" options={options} />;
 };
 

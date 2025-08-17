@@ -38,6 +38,20 @@ html {
   @apply transition-all duration-450;
 }
 
+/* ANIMATIONS */
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(-3deg) translateY(0);
+  }
+  50% {
+    transform: rotate(3deg) translateY(-4px);
+  }
+}
+
+.animate-wiggle {
+  animation: wiggle 1.5s ease-in-out infinite;
+}
+
 /* CUSTOM UI CLASSES */
 
 .button-primary {
@@ -52,7 +66,6 @@ html {
   @apply flex flex-row items-center gap-2 text-blue-300 font-bold hover:text-blue-700 hover-trans;
 }
 
-
 .glass {
   @apply bg-white/10 dark:bg-white/5
           border border-white/20
@@ -62,6 +75,23 @@ html {
           rounded-2xl;
 }
 
+.glass-noborder {
+  @apply bg-white/10 dark:bg-white/5
+         shadow-lg
+         backdrop-blur-md
+         saturate-150
+         rounded-2xl;
+}
+
 .heading-text-hero {
   @apply lg:text-7xl text-5xl text-center font-black tracking-wide lg:leading-25 leading-15;
 }
+
+.head-text {
+  @apply lg:text-4xl text-2xl font-bold tracking-wide;
+}
+
+.head-text-center {
+  @apply text-4xl font-bold tracking-wide text-center;
+}
+
