@@ -1,20 +1,42 @@
 "use client"
 
-import Link from "next/link";
-import { HandMetal, Boxes, Home, DiamondPlus, DiamondMinus, Phone } from 'lucide-react';
-import { ReactNode, useState } from "react";
+import Image from "next/image";
+import { HandMetal, Boxes, Home, Phone, Laptop, Moon, Sun } from 'lucide-react';
+import NavbarFlow from "../ui/navbar-flow";
+import { ThemeSwitch } from "../ui/theme-switch";
 
 const Navbar = () => {
-  const [toggle, setToggle] = useState<boolean>(false);
-  
-  const navLinks: Record<string, ReactNode> = {
-    'home': <><Home/>HOME</>,
-    'aboutme': <><HandMetal/>ABOUT ME</>,
-    'projects': <><Boxes/>PROJECTS</>,
-    'contact': <><Phone/>CONTACTS</>
-  }
- 
+
+  const navLinks = [
+    { text: "Home", icon: <Home />, url: '#home', submenu: false, submenus: {} },
+    { text: "About", icon: <HandMetal />, url: '#aboutme', submenu: false, submenus: {} },
+    { text: "Projects", icon: <Boxes />, url: '#projects', submenu: false, submenus: {} },
+    { text: "Contact", icon: <Phone />, url: '#home', submenu: false, submenus: {} },
+  ]
+
   return (
+    <div className="flex flex-col w-full fixed z-100">
+      <NavbarFlow
+        emblem={<div>ANTONIO</div>}
+        links={navLinks}
+        rightComponent={
+          <ThemeSwitch
+            modes={["light", "dark", "system"]}
+            icons={[
+              <Sun key="sun-icon" size={16} />,
+              <Moon key="moon-icon" size={16} />,
+              <Laptop key="laptop-icon" size={16} />,
+            ]}
+            showInactiveIcons="all"
+          />
+        }
+      />
+
+    </div>
+
+  )
+ 
+  /*return (
     <div className="flex flex-col w-full fixed z-10">
       <div className="flex flex-row justify-center">
         <div className={`flex flex-row justify-between m-6 p-3 pl-6 pr-6 rounded-2xl glass not-lg:justify-end not-sm:hidden`}>
@@ -42,7 +64,7 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-  );
+  );*/
 }
 
 export default Navbar;
