@@ -12,11 +12,11 @@ const stats = [
 const PortfolioDevStats = () => {
   return (
     <>
-    <StatsCount
-      stats={stats}
-      showDividers={false}
-    />
-    
+      <StatsCount 
+        className="mb-0"
+        stats={stats}
+        showDividers={false}
+      />
     </>
   );
 }

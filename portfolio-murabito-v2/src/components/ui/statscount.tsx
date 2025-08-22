@@ -155,7 +155,7 @@ export default function StatsCount({
     <motion.section
       ref={containerRef}
       className={cn(
-        "py-8 sm:py-12 lg:py-20 px-2 sm:px-4 md:px-8 w-full overflow-hidden",
+        "mt-20 px-2 sm:px-4 md:px-8 w-full overflow-hidden", //py-8 sm:py-12 lg:py-20
         className
       )}
       initial={{ opacity: 0 }}

@@ -256,14 +256,7 @@ const NavbarFlow: React.FC<NavbarFlowProps> = ({
   return (
     <div className={`sticky top-0 z-50 w-full ${styleName}`}>
       <div className="hidden md:block">
-        <div className="relative w-full max-w-7xl mx-auto h-24 flex items-center justify-between px-4 lg:px-10">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={emblemMotion}
-            className="bg-gray-200/80 dark:bg-black/95 backdrop-blur-sm text-gray-800 dark:text-gray-200 px-4 lg:px-8 py-3 lg:py-4 rounded-full font-semibold text-lg lg:text-xl z-10 flex-shrink-0"
-          >
-            {emblem}
-          </motion.div>
+        <div className="relative w-full max-w-3xl mx-auto h-24 flex items-center justify-between px-4 lg:px-10">
 
           <motion.nav
             initial={{

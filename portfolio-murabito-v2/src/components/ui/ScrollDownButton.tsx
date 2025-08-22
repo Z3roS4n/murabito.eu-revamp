@@ -7,9 +7,15 @@ interface ScrollDownButton {
 
 const ScrollDownButton = ({ targetId }: ScrollDownButton) => {
   return (
-    <Link className="block text-8xl scale-200 text-primary mb-10 shadow-primary hover:mb-7 hover-trans-long glass-noborder animate-wiggle" href={targetId}>
-      <ChevronDown/>
-    </Link>
+<Link
+  href={targetId}
+  className="relative block text-8xl mb-10 animate-wiggle scale-200 hover:mb-7 transition-all duration-300"
+>
+  {/* Ombra blu sfumata */}
+  <span className="absolute inset-0 -z-10 rounded-full"></span>
+  <ChevronDown className="text-primary" />
+</Link>
+
   );
 }
 

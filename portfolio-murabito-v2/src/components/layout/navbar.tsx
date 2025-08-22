@@ -10,7 +10,7 @@ const Navbar = () => {
   const navLinks = [
     { text: "Home", icon: <Home />, url: '#home', submenu: false, submenus: {} },
     { text: "About", icon: <HandMetal />, url: '#aboutme', submenu: false, submenus: {} },
-    { text: "Projects", icon: <Boxes />, url: '#projects', submenu: false, submenus: {} },
+    { text: "Experiences", icon: <Boxes />, url: '#experiences', submenu: false, submenus: {} },
     { text: "Contact", icon: <Phone />, url: '#home', submenu: false, submenus: {} },
   ]
 
@@ -21,11 +21,10 @@ const Navbar = () => {
         links={navLinks}
         rightComponent={
           <ThemeSwitch
-            modes={["light", "dark", "system"]}
+            modes={["light", "dark"]}
             icons={[
               <Sun key="sun-icon" size={16} />,
               <Moon key="moon-icon" size={16} />,
-              <Laptop key="laptop-icon" size={16} />,
             ]}
             showInactiveIcons="all"
           />

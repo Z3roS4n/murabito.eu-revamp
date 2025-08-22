@@ -1,12 +1,12 @@
 import ScrollDownButton from "@/components/ui/ScrollDownButton";
-import SocialNetworks from "@/components/ui/SocialNetworks";
 import VenomBeam from "@/components/ui/venom-beam";
-import Image from "next/image";
 import TypeWriter from '@/components/layout/TypeWriter';
 import BackgroundMeteors from "@/components/ui/backgroundmeteors";
 import { AnimatedTextGenerate } from "@/components/ui/animated-textgenerate";
 import CenteredImageCard from "@/components/ui/profilecard";
 import PortfolioDevStats from "@/components/layout/PortfolioDevStats";
+import AnimatedHeadline from "@/components/ui/animated-headline";
+import Experience from "@/components/layout/Experience";
 
 export default function Home() {
   return (
@@ -14,12 +14,12 @@ export default function Home() {
       <main>
         <div className="relative overflow-hidden min-h-screen">
           <VenomBeam className="flex items-center justify-center flex-col px-4 w-full min-h-screen">
-            <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-4xl md:text-5xl lg:text-7xl font-sans pb-1 md:pb-2 pt-2 md:pt-4 relative z-20 font-bold tracking-tight leading-tight">
-              Code that <TypeWriter words={[' works fast,', ' you can rely on,', ' explains himself,']}/>
-              <br />
-              Design that speaks.
+            <h2 className="bg-clip-text items-center text-transparent text-center bg-gradient-to-r from-neutral-900 to-neutral-500 dark:from-neutral-500 dark:to-white text-4xl md:text-5xl lg:text-7xl font-sans pb-1 md:pb-2 pt-2 md:pt-4 relative z-20 font-bold tracking-tight leading-tight">
+              I turn ideas into
+              <br/>
+              <TypeWriter color="bg-gradient-to-l dark:from-blue-300 from-blue-700 to-blue-500" words={['websites', 'real products', 'experiences', 'digital solutions', 'useful tools', 'awesome designs']}/>
             </h2>
-            <p className="max-w-xl mx-auto text-base md:text-lg text-neutral-700 dark:text-neutral-400 text-center mt-1">
+            <p className="max-w-xl mx-auto text-base lg:text-xl md:text-lg text-neutral-700 dark:text-neutral-400 text-center mt-1">
               I build modern, performant web applications where clean code meets thoughtful design.  
               From frontend to backend, I turn ideas into engaging digital experiences.
             </p>
@@ -31,12 +31,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="aboutme" className="relative lg:h-250 h-375">
+        <div id="aboutme" className="relative lg:h-450 h-900">
           <BackgroundMeteors>      
-            <div className="flex flex-col gap-20">
-              <div className="flex flex-col justify-center items-center gap-7">
-                <section id="aboutme" className="flex lg:flex-row flex-col-reverse lg:w-5/10 w-7/10 lg:gap-15 gap-7">
-                  <div>
+            <div className="flex flex-col justify-center items-center gap-20 mt-20">
+              <div className="flex flex-col self-center items-center gap-7">
+                <section className="flex lg:flex-row flex-col-reverse self-center-safe lg:w-5/10 w-7/10 lg:gap-15 gap-7">
+                  <div className="self-start">
                     <CenteredImageCard
                       img="/Antonio_PostIG_SQUARE.jpg"
                       name="Antonio Murabito"
@@ -44,7 +44,8 @@ export default function Home() {
                       skills={[
                         { name: "TypeScript", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
                         { name: "Next.js", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
-                        { name: "TailwindCSS", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },                        { name: "Photoshop", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg" },
+                        { name: "TailwindCSS", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },                        
+                        { name: "Photoshop", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg" },
                         { name: "Illustrator", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-original.svg" },
                         { name: "Figma", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" }
                       ]}
@@ -54,57 +55,58 @@ export default function Home() {
                     />
                   </div>
 
-                  <div className="flex flex-col">
-                    <h1 className="head-text tex">
+                  <div className="flex flex-col self-start">
+                    <h1 className="head-text">
                       I’m Antonio Murabito
                       <br />
                       your <TypeWriter className="font-bold" color="text-blue-500" words={['Web Developer', 'Graphic Designer']}/>
                     </h1>
 
                     <AnimatedTextGenerate
-                      className="text-center"
+                      className="text-center self-start"
                       textClassName="font-normal text-center"
                       text={"I thrive where code meets creativity, transforming ideas into visuals and interactive experiences that communicate more effectively than words alone. From sleek interfaces to bold branding, I make your digital presence memorable, meaningful, and unmistakably yours."}
                       blurEffect
                       speed={0.00001}
                       highlightWords={["creativity", "experiences", "memorable"]}
                       highlightClassName="text-blue-500 dark:text-blue-500 font-bold"
-                      linkWords={["pressure", "night", "talent"]}
-                      linkHrefs={["/", "/", "/"]}
-                      linkClassNames={[
-                        "underline decoration-pink-500 dark:decoration-pink-400 hover:decoration-pink-400 dark:hover:decoration-pink-300 transition",
-                        "underline decoration-sky-500 dark:decoration-sky-400 hover:decoration-sky-400 dark:hover:decoration-sky-300 transition",
-                        "underline decoration-blue-500 dark:decoration-blue-400 hover:decoration-blue-400 dark:hover:decoration-blue-300 transition",
-                      ]}
                     />
                   </div>
                 </section>
-                <PortfolioDevStats/>
+                <section>
+                  <PortfolioDevStats/>
+                </section>
+                <section id="experiences" className="flex flex-col self-center-safe lg:w-5/10 w-7/10">
+                  <AnimatedHeadline
+                    title="Personal and work experiences"
+                    className="scroll-m-20 pb-2 text-5xl font-semibold tracking-tight first:mt-0"
+                  />
+                  <div className="flex flex-col gap-2">
+                    <Experience 
+                      title="Full-Stack Developer"
+                      subtitle="Freelancer at BDGROUPSRL 2025 - CURRENT"
+                      description="Currently working as a freelance Web Developer for BDGROUPSRL, focusing on API server optimization and authentication system development. My role involves improving server performance, implementing secure authentication protocols, and optimizing database queries to enhance overall system efficiency. I work with modern technologies to ensure scalable and secure web solutions for enterprise-level applications."
+                      skills={['Next.js', 'ExpressJS', 'TypeScript', 'MySQL', 'JWT', 'TailwindCSS', 'Python']}
+                    />
+                    <Experience 
+                      title="Graphic Designer & SMM"
+                      subtitle="Self-Employed at Socialnet 2025 - CURRENT"
+                      description="In 2025, I co-founded Socialnet, a Social Media Management & Marketing agency. We offer social media management services, creation of engaging visual content, and development of communication strategies for businesses and professionals. Our goal is to improve our clients' digital image, increasing their visibility and online engagement."
+                      skills={['Photoshop', 'Illustrator', 'Figma', 'Copywriting', 'Planning']}
+                    />                  
+                    <Experience 
+                      title="Web Developer"
+                      subtitle="Freelancer at BDGROUPSRL 2025 - CURRENT"
+                      description="Since 2021, I've been working as a freelance Web Developer, specializing in the design and development of modern, dynamic, and customized websites for businesses and individuals. My goal is to provide functional, user-friendly, and SEO-optimized solutions to ensure maximum online visibility for my clients. I use modern technologies to create functional, responsive, and user experience-optimized platforms, including full-stack development, database optimization, and performance tuning. I also collaborate with companies like Senes Cooperativa Sociale!"
+                      skills={['Fastify', 'Supabase', 'PrismaORM', 'BetterAuth', 'Next.js', 'TailwindCSS', 'React']}
+                    />
+                  </div>
+
+                </section>
               </div>
             </div>
           </BackgroundMeteors>  
         </div>
-
-        <div id="projects" className="relative lg:h-250 h-150">    
-          <div className="flex flex-col gap-20">
-            <div className="flex flex-col justify-center items-center gap-7">
-              <section id="aboutme" className="flex lg:flex-row flex-col-reverse lg:w-5/10 w-7/10 lg:gap-15 gap-7 mt-10">
-                <h1 className="scroll-m-20 pb-2 lg:text-5xl text-3xl text-center font-semibold tracking-tight first:mt-0">
-                  Some of my projects
-                </h1>
-              </section>
-            </div>
-          </div>  
-        </div>
-
-
-        <div className=" flex flex-col mt-15 gap-20">
-          <div className="flex lg:flex-row flex-col justify-center items-center gap-7">
-            <section id="aboutme" className="flex lg:flex-row flex-col lg:w-5/10 w-7/10 lg:gap-15 gap-7">
-            </section>
-          </div>
-        </div>
-
       </main>
     </div>
   );

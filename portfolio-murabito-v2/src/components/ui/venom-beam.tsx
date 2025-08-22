@@ -16,9 +16,10 @@ interface Particle {
 interface VenomBeamProps {
   children?: React.ReactNode;
   className?: string;
+  height?: string;
 }
 
-const VenomBeam: React.FC<VenomBeamProps> = ({ children, className = "" }) => {
+const VenomBeam: React.FC<VenomBeamProps> = ({ children, className = "", height = "h-screen" }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | null>(null);
   const particlesRef = useRef<Particle[]>([]);
@@ -146,14 +147,17 @@ const VenomBeam: React.FC<VenomBeamProps> = ({ children, className = "" }) => {
         );
 
         if (isDarkRef.current) {
-          gradient.addColorStop(0, `rgba(200, 200, 255, ${alpha})`);
-          gradient.addColorStop(0.5, `rgba(150, 150, 200, ${alpha * 0.8})`);
-          gradient.addColorStop(1, `rgba(100, 100, 150, ${alpha * 0.3})`);
+          // Gradient blu chiaro per dark mode
+          gradient.addColorStop(0, `rgba(180, 220, 255, ${alpha})`);          // azzurro chiaro
+          gradient.addColorStop(0.5, `rgba(100, 160, 230, ${alpha * 0.8})`);  // blu medio
+          gradient.addColorStop(1, `rgba(50, 100, 180, ${alpha * 0.3})`);     // blu più scuro
         } else {
-          gradient.addColorStop(0, `rgba(60, 60, 120, ${alpha})`);
-          gradient.addColorStop(0.5, `rgba(80, 80, 140, ${alpha * 0.8})`);
-          gradient.addColorStop(1, `rgba(100, 100, 160, ${alpha * 0.3})`);
+          // Gradient blu più saturo per light mode
+          gradient.addColorStop(0, `rgba(60, 140, 255, ${alpha})`);           // blu vivo
+          gradient.addColorStop(0.5, `rgba(40, 110, 210, ${alpha * 0.8})`);   // blu medio
+          gradient.addColorStop(1, `rgba(20, 70, 160, ${alpha * 0.3})`);      // blu profondo
         }
+
 
         ctx.fillStyle = gradient;
         ctx.fill();
@@ -172,10 +176,13 @@ const VenomBeam: React.FC<VenomBeamProps> = ({ children, className = "" }) => {
             ctx.lineTo(otherParticle.x, otherParticle.y);
 
             if (isDarkRef.current) {
-              ctx.strokeStyle = `rgba(150, 150, 200, ${alpha})`;
+              // Blu più chiaro e luminoso per dark mode
+              ctx.strokeStyle = `rgba(100, 180, 255, ${alpha})`;
             } else {
-              ctx.strokeStyle = `rgba(80, 80, 140, ${alpha})`;
+              // Blu più intenso per light mode
+              ctx.strokeStyle = `rgba(30, 90, 200, ${alpha})`;
             }
+
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -198,7 +205,7 @@ const VenomBeam: React.FC<VenomBeamProps> = ({ children, className = "" }) => {
   }, []);
 
   return (
-    <div className="relative h-screen md:h-screen w-full overflow-hidden bg-white dark:bg-black">
+    <div className={`relative ${height} md:${height} w-full overflow-hidden bg-white dark:bg-black`}>
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900"
@@ -209,9 +216,9 @@ const VenomBeam: React.FC<VenomBeamProps> = ({ children, className = "" }) => {
       <div className={`absolute inset-0 ${className}`}>{children}</div>
 
       <div className="absolute top-20 left-10 w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full animate-pulse opacity-60" />
-      <div className="absolute top-40 right-20 w-1 h-1 bg-purple-600 dark:bg-purple-400 rounded-full animate-pulse opacity-40" />
+      <div className="absolute top-40 right-20 w-1 h-1 bg-blue-600 dark:bg-blue-400 rounded-full animate-pulse opacity-40" />
       <div className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-blue-500 dark:bg-blue-300 rounded-full animate-pulse opacity-50" />
-      <div className="absolute bottom-20 right-1/3 w-1 h-1 bg-purple-500 dark:bg-purple-300 rounded-full animate-pulse opacity-30" />
+      <div className="absolute bottom-20 right-1/3 w-1 h-1 bg-blue-500 dark:bg-blue-300 rounded-full animate-pulse opacity-30" />
     </div>
   );
 };

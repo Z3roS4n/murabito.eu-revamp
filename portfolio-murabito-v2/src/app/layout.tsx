@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
+import Footer from "@/components/layout/Footer";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -20,17 +21,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${montserrat.variable} antialiased overflow-x-hidden`}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <div className="w-full flex justify-center"><Navbar/></div>
+    <html lang="en" suppressHydrationWarning className={`${montserrat.variable} antialiased`}>
+      <body className="overflow-x-hidden">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="transition-all duration-100 min-h-screen bg-primary-foreground">
+            <div className="w-full flex justify-center">
+              <Navbar />
+            </div>
             {children}
-          </ThemeProvider>
+            <div>
+              <Footer/>
+            </div>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

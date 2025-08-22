@@ -62,7 +62,7 @@ export default function BackgroundMeteors({
   }, []);
 
   return (
-    <div className="relative flex h-1/1 w-full items-center justify-center overflow-hidden bg-white dark:bg-black">
+    <div className="relative flex h-full w-full items-center justify-center overflow-hidden bg-white dark:bg-black">
       <div
         className="absolute inset-0"
         style={{
@@ -104,7 +104,7 @@ export default function BackgroundMeteors({
         </motion.div>
       ))}
 
-      <div className="absolute inset-0 z-10 flex items-center justify-center">
+      <div className="absolute inset-0 z-10 flex justify-start items-start">
         {children}
       </div>
     </div>

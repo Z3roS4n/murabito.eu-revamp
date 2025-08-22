@@ -1,4 +1,6 @@
-module.exports = { 
+import type { Config } from "tailwindcss";
+
+const config: Config = {
    theme: { 
      extend: { 
        keyframes: { 
@@ -13,4 +15,6 @@ module.exports = {
      }, 
     }, 
     plugins: [], 
- };
+};
+
+export default config;
