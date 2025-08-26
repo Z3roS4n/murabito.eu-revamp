@@ -1,6 +1,6 @@
 import ScrollDownButton from "@/components/ui/ScrollDownButton";
 import VenomBeam from "@/components/ui/venom-beam";
-import TypeWriter from '@/components/layout/TypeWriter';
+import TypeWriter from '@/components/layout/typewriter';
 import BackgroundMeteors from "@/components/ui/backgroundmeteors";
 import { AnimatedTextGenerate } from "@/components/ui/animated-textgenerate";
 import CenteredImageCard from "@/components/ui/profilecard";
