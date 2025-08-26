@@ -7,6 +7,7 @@ import CenteredImageCard from "@/components/ui/profilecard";
 import PortfolioDevStats from "@/components/layout/PortfolioDevStats";
 import AnimatedHeadline from "@/components/ui/animated-headline";
 import Experience from "@/components/layout/Experience";
+import Project from "@/components/layout/Project";
 
 export default function Home() {
   return (
@@ -31,7 +32,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="aboutme" className="relative lg:h-450 h-900">
+        <div id="aboutme" className="relative lg:h-600 h-1200">
           <BackgroundMeteors>      
             <div className="flex flex-col justify-center items-center gap-20 mt-20">
               <div className="flex flex-col self-center items-center gap-7">
@@ -87,18 +88,59 @@ export default function Home() {
                       subtitle="Freelancer at BDGROUPSRL 2025 - CURRENT"
                       description="Currently working as a freelance Web Developer for BDGROUPSRL, focusing on API server optimization and authentication system development. My role involves improving server performance, implementing secure authentication protocols, and optimizing database queries to enhance overall system efficiency. I work with modern technologies to ensure scalable and secure web solutions for enterprise-level applications."
                       skills={['Next.js', 'ExpressJS', 'TypeScript', 'MySQL', 'JWT', 'TailwindCSS', 'Python']}
+                      direction="left"
                     />
                     <Experience 
                       title="Graphic Designer & SMM"
                       subtitle="Self-Employed at Socialnet 2025 - CURRENT"
                       description="In 2025, I co-founded Socialnet, a Social Media Management & Marketing agency. We offer social media management services, creation of engaging visual content, and development of communication strategies for businesses and professionals. Our goal is to improve our clients' digital image, increasing their visibility and online engagement."
                       skills={['Photoshop', 'Illustrator', 'Figma', 'Copywriting', 'Planning']}
+                      direction="right"
+
                     />                  
                     <Experience 
                       title="Web Developer"
                       subtitle="Freelancer at BDGROUPSRL 2025 - CURRENT"
                       description="Since 2021, I've been working as a freelance Web Developer, specializing in the design and development of modern, dynamic, and customized websites for businesses and individuals. My goal is to provide functional, user-friendly, and SEO-optimized solutions to ensure maximum online visibility for my clients. I use modern technologies to create functional, responsive, and user experience-optimized platforms, including full-stack development, database optimization, and performance tuning. I also collaborate with companies like Senes Cooperativa Sociale!"
                       skills={['Fastify', 'Supabase', 'PrismaORM', 'BetterAuth', 'Next.js', 'TailwindCSS', 'React']}
+                      direction="left"
+
+                    />
+                  </div>
+
+                </section>
+                <section id="projects" className="flex flex-col self-center-safe lg:w-5/10 w-7/10">
+                  <AnimatedHeadline
+                    title="Some of my coding projects"
+                    className="scroll-m-20 pb-2 text-5xl font-semibold tracking-tight first:mt-0"
+                  />
+                  <div className="flex lg:flex-row flex-col gap-2">
+                    <Project 
+                      image="msforum.png"
+                      title="MSForum"
+                      subtitle="Fully functional forum made with Next.js, Tailwind, PrismaORM & Clerk."
+                      skills={['Next.js', 'TypeScript', 'Supabase', 'TailwindCSS', 'Clerk', 'PrismaORM']}
+                      link="https://github.com/Z3roS4n/NextJS-Forum-Website"
+                      direction="left"
+                      
+                    />
+                    <Project 
+                      image="converzia.png"
+                      title="ConverzIA"
+                      subtitle="Vanilla HTML/CSS/JS which interfaces with a TS Back-End Fastify server and OpenAI APIs."
+                      skills={['HTML/CSS', 'TypeScript', 'Fastify', 'OpenAI', 'REST']}
+                      link="https://github.com/Z3roS4n/ConverzIA.net"
+                      direction="right"
+
+                    />
+                    <Project 
+                      image="webapis.png"
+                      title="Web Utilities"
+                      subtitle="Multi-service API architecture designed to provide various utilities for developers. Still ongoing..."
+                      skills={['Fastify', 'TypeScript', 'Supabase', 'REST', 'PrismaORM']}
+                      link="https://github.com/Z3roS4n/Development-Web-APIs"
+                      direction="left"
+
                     />
                   </div>
 

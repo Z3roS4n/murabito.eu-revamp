@@ -10,16 +10,22 @@ import {
 } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-interface Experience {
+export interface IExperience {
   title: string;
   subtitle: string;
   description: string;
   skills: Array<string>;
+  direction?: string;
+  onClick?: () => void;
 }
 
-const Experience = ({ title, subtitle, description, skills }: Experience) => {
+const Experience = ({ title, subtitle, description, skills, direction = 'left', onClick }: IExperience) => {
   const containerRef = useRef<HTMLElement>(null);
   const isInView = useInView(containerRef, { margin: "-100px" });
+
+  const [toggle, setToggle] = useState<boolean>(false);
+
+  const animationDirection = direction == 'left' ? -40 : 40;
 
   return (
     <>
@@ -32,17 +38,21 @@ const Experience = ({ title, subtitle, description, skills }: Experience) => {
         <motion.div
           className={cn("text-center mb-4 sm:mb-4 lg:mb-6")}
           initial={{ opacity: 0, y: -20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: animationDirection }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <SpotlightCard className="dark:bg-black h-full" spotlightColor="34, 150, 238">
             <div className="w-full h-full flex flex-col lg:items-start lg:justify-start justify-center items-center  gap-2">
               <h3 className="text-xl font-semibold mb-0">{title}</h3>
               <p className="bg-clip-text text-transparent bg-gradient-to-l dark:from-blue-300 from-blue-700 to-blue-500 font-semibold">{subtitle}</p>
-              <p className="text-sm text-muted-foreground lg:text-start mb-1">{description}</p>
-              <div className="flex flex-row not-lg:justify-center flex-wrap gap-2">
+              <p className="text-sm font-light text-muted-foreground lg:text-start mb-1">{description}</p>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="flex flex-row not-lg:justify-center flex-wrap gap-2">
                 {skills.map((skill, index) => <Badge variant="default" key={index} shiny={true}>{skill}</Badge>)}
-              </div>
+              </motion.div>
             </div>
           </SpotlightCard>
         </motion.div>

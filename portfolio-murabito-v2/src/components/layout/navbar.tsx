@@ -8,10 +8,10 @@ import { ThemeSwitch } from "../ui/theme-switch";
 const Navbar = () => {
 
   const navLinks = [
-    { text: "Home", icon: <Home />, url: '#home', submenu: false, submenus: {} },
+    { text: "Home", icon: <Home />, url: '/', submenu: false, submenus: {} },
     { text: "About", icon: <HandMetal />, url: '#aboutme', submenu: false, submenus: {} },
     { text: "Experiences", icon: <Boxes />, url: '#experiences', submenu: false, submenus: {} },
-    { text: "Contact", icon: <Phone />, url: '#home', submenu: false, submenus: {} },
+    { text: "Projects", icon: <Phone />, url: '#projects', submenu: false, submenus: {} },
   ]
 
   return (

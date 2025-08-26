@@ -89,7 +89,7 @@ export default function BackgroundMeteors({
           className="absolute top-0"
           style={{ left: b.x, zIndex: 2 }}
           initial={{ y: -150 }}
-          animate={{ y: "100vh" }}
+          animate={{ y: "300vh" }}
           transition={{
             duration: b.duration,
             ease: "linear",

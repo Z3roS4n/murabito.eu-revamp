@@ -29,9 +29,9 @@ export default function RootLayout({
               <Navbar />
             </div>
             {children}
-            <div>
+            {/*<div>
               <Footer/>
-            </div>
+            </div>*/}
           </div>
         </ThemeProvider>
       </body>
