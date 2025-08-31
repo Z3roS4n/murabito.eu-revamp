@@ -8,6 +8,7 @@ import PortfolioDevStats from "@/components/layout/PortfolioDevStats";
 import AnimatedHeadline from "@/components/ui/animated-headline";
 import Experience from "@/components/layout/Experience";
 import Project from "@/components/layout/Project";
+import Contact from "@/components/layout/Contact";
 
 export default function Home() {
   return (
@@ -32,7 +33,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="aboutme" className="relative lg:h-600 h-1200">
+        <div id="aboutme" className="relative lg:h-750 h-1430">
           <BackgroundMeteors>      
             <div className="flex flex-col justify-center items-center gap-20 mt-20">
               <div className="flex flex-col self-center items-center gap-7">
@@ -142,6 +143,16 @@ export default function Home() {
                       direction="left"
 
                     />
+                  </div>
+
+                </section>
+                <section id="contact" className="flex flex-col self-center-safe lg:w-5/10 w-7/10">
+                  <AnimatedHeadline
+                    title="Let's get in touch"
+                    className="scroll-m-20 pb-2 text-5xl font-semibold tracking-tight first:mt-0"
+                  />
+                  <div className="flex flex-col gap-2">
+                    <Contact direction="left"/>
                   </div>
 
                 </section>

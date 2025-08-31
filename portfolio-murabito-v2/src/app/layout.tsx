@@ -1,19 +1,20 @@
-import type { Metadata } from "next";
+"use client"
+
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
-import Footer from "@/components/layout/Footer";
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin", "latin-ext", "cyrillic", "cyrillic-ext", "vietnamese"]
 })
 
-export const metadata: Metadata = {
-  title: "Antonio Murabito - Portfolio",
-  description: "Second version of my personal portfolio, made in Next.js",
-};
+const queryClient = new QueryClient();
 
 export default function RootLayout({
   children,
@@ -23,17 +24,19 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={`${montserrat.variable} antialiased`}>
       <body className="overflow-x-hidden">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="transition-all duration-100 min-h-screen bg-primary-foreground">
-            <div className="w-full flex justify-center">
-              <Navbar />
+        <QueryClientProvider client={queryClient}>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <div className="transition-all duration-100 min-h-screen bg-primary-foreground">
+              <div className="w-full flex justify-center">
+                <Navbar />
+              </div>
+              {children}
+              {/*<div>
+                <Footer/>
+              </div>*/}
             </div>
-            {children}
-            {/*<div>
-              <Footer/>
-            </div>*/}
-          </div>
-        </ThemeProvider>
+          </ThemeProvider>
+        </QueryClientProvider>
       </body>
     </html>
   );
