@@ -21,10 +21,11 @@ export interface IProject {
   skills: Array<string>;
   link: string;
   direction?: string;
+  viewOn?: string;
   onClick?: () => void;
 }
 
-const Project = ({ image, title, subtitle, description, skills, direction = 'left', link }: IProject) => {
+const Project = ({ image, title, subtitle, description, skills, direction = 'left', link, viewOn = 'View on GitHub' }: IProject) => {
   const containerRef = useRef<HTMLElement>(null);
   const isInView = useInView(containerRef, { margin: "-100px" });
   const [toggleLink, setToggleLink] = useState<boolean>(true); 
@@ -49,8 +50,8 @@ const Project = ({ image, title, subtitle, description, skills, direction = 'lef
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <SpotlightCard className="dark:bg-black w-full h-100" spotlightColor="34, 150, 238">
-            <div className="w-full h-full aspect-square flex flex-col items-center  gap-2">
-              <Image src={`/projects/${image}`} height={300} width={300} className="w-full rounded-md" alt="project"></Image>
+            <div className="w-full h-full flex flex-col items-center gap-2">
+              <Image src={`/projects/${image}`} height={300} width={300} className="w-full h-35 rounded-md" alt="project"></Image>
               <h3 className="text-xl font-semibold mb-0 self-center">{title}</h3>
               <p className="font-light" >{subtitle}</p>
             </div>
@@ -60,7 +61,7 @@ const Project = ({ image, title, subtitle, description, skills, direction = 'lef
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex flex-col justify-center">
               <div>
-                <Link href={link} className="bg-clip-text text-transparent bg-gradient-to-l dark:from-blue-300 from-blue-700 to-blue-500 font-semibold">View on GitHub <GitBranch/></Link>
+                <Link href={link} className="bg-clip-text text-transparent bg-gradient-to-l dark:from-blue-300 from-blue-700 to-blue-500 font-semibold">{viewOn}</Link>
               </div>
               <div className="flex flex-row justify-center flex-wrap self-end gap-2">
                 {skills.map((skill, index) => <Badge variant="default" key={index} shiny={true}>{skill}</Badge>)}

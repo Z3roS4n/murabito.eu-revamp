@@ -20,14 +20,20 @@ interface IContact {
 
 const Contact = ({ direction }: IContact) => {  
 
-  const [email, setEmail] = useState<string>();
-  const [subject, setSubject] = useState<string>();
-  const [description, setDescription] = useState<string>();
+  const [email, setEmail] = useState<string>("");
+  const [subject, setSubject] = useState<string>("");
+  const [description, setDescription] = useState<string>("");
 
   const resetForm = () => {
     setEmail("");
     setSubject("");
     setDescription("");
+  }
+
+  const verifyForm = (): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    return !!(emailRegex.test(email) && subject.length >= 15 && description.length >= 150);
   }
 
   const sendMessage = useMutation({
@@ -37,11 +43,10 @@ const Contact = ({ direction }: IContact) => {
         subject: subject,
         description: description
       };
-
       const res = fetch(`/api/contact`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body)})
     },
     onSuccess: () => {
-      
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   })
   const containerRef = useRef<HTMLElement>(null);
@@ -78,10 +83,12 @@ const Contact = ({ direction }: IContact) => {
                       <label htmlFor="email" className="text-sm font-light opacity-80">Email</label>
                       <Input type="email" onChange={(e) => setEmail(e.target.value)}/>
                       <label htmlFor="email" className="text-sm font-light opacity-80">Description</label>
-                      <Textarea className="max-h-30" minLength={150} maxLength={1000} onChange={(e) => setDescription(e.target.value)}/>
+                      <Textarea className="max-h-30 break-all" minLength={150} maxLength={1000} onChange={(e) => setDescription(e.target.value)}/>
                     </div>
                     <div className="flex flex-col space-y-1.5">
-                      <Button onClick={() => sendMessage.mutate({ email: email ?? "", subject: subject ?? "", description: description ?? "" })}>Send your Idea</Button>
+                      <Button
+                        disabled={!verifyForm()}
+                        onClick={() => sendMessage.mutate({ email: email ?? "", subject: subject ?? "", description: description ?? "" })}>Send your Idea</Button>
                     </div>
                   </div>
                 </form>
@@ -99,7 +106,7 @@ const Contact = ({ direction }: IContact) => {
                 </Link>
               </SpotlightCard>
               <SpotlightCard className="dark:bg-black h-full not-lg:w-1/3" spotlightColor="34, 150, 238">
-                <Link href={"https://www.linkedin.com/in/z3ros4n/"} className="w-full h-full flex flex-col justify-center items-center  gap-2">
+                <Link href={"https://www.linkedin.com/in/z3ros4n/"} className="w-full h-full flex flex-col justify-center items-center gap-2">
                   <Linkedin/>
                 </Link>
               </SpotlightCard>

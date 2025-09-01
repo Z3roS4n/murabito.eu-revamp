@@ -10,6 +10,59 @@ import Experience from "@/components/layout/Experience";
 import Project from "@/components/layout/Project";
 import Contact from "@/components/layout/Contact";
 
+export const metadata = {
+  title: 'Antonio Murabito — Web Developer & Designer / Sviluppatore Web e Designer',
+  description:
+    "I build modern, performant web applications where clean code meets thoughtful design. From frontend to backend, I turn ideas into engaging digital experiences. — Costruisco applicazioni web moderne e performanti dove il codice pulito incontra il design: trasformo idee in esperienze digitali coinvolgenti.",
+  keywords: [
+    'Antonio Murabito',
+    'web developer',
+    'graphic designer',
+    'TypeScript',
+    'Next.js',
+    'TailwindCSS',
+    'portfolio',
+    'sviluppatore web',
+    'designer'
+  ],
+  authors: [{ name: 'Antonio Murabito', url: 'https://murabito.eu' }],
+  creator: 'Antonio Murabito',
+  publisher: 'Antonio Murabito',
+  metadataBase: new URL('https://murabito.eu'),
+  openGraph: {
+    title: 'Antonio Murabito — Web Developer & Designer',
+    description:
+      'I build modern, performant web applications where clean code meets thoughtful design. / Costruisco applicazioni web moderne e performanti dove il codice pulito incontra il design.',
+    url: 'https://murabito.eu',
+    siteName: 'murabito.eu',
+    images: [
+      {
+        url: 'https://murabito.eu/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Antonio Murabito — Web Developer & Designer'
+      }
+    ],
+    locale: 'en_US',
+    type: 'website'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Antonio Murabito — Web Developer & Designer',
+    description:
+      'I build modern, performant web applications where clean code meets thoughtful design. / Costruisco applicazioni web moderne e performanti dove il codice pulito incontra il design.',
+    images: ['https://murabito.eu/og-image.png'],
+    creator: '@z3ros4n'
+  },
+  alternates: {
+    canonical: 'https://murabito.eu',
+    languages: {
+      'en-US': '/en',
+      'it-IT': '/it'
+    }
+  }
+};
+
 export default function Home() {
   return (
     <div>
@@ -135,6 +188,16 @@ export default function Home() {
 
                     />
                     <Project 
+                      image="senes.png"
+                      title="SenesGroup.it"
+                      subtitle="Developed in React.js, with a responsive design showcasing their services. Clean UI, SEO-optimized, and built for scalability."
+                      skills={['React', 'TypeScript', 'SEO', 'CSS', 'Fastify']}
+                      link="https://github.com/Z3roS4n/Development-Web-APIs"
+                      viewOn="View Website"
+                      direction="left"
+
+                    />
+                    {/*<Project 
                       image="webapis.png"
                       title="Web Utilities"
                       subtitle="Multi-service API architecture designed to provide various utilities for developers. Still ongoing..."
@@ -142,7 +205,7 @@ export default function Home() {
                       link="https://github.com/Z3roS4n/Development-Web-APIs"
                       direction="left"
 
-                    />
+                    />*/}
                   </div>
 
                 </section>

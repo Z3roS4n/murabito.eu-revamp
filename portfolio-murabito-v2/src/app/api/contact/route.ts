@@ -17,7 +17,7 @@ const sendMessage = async (text: string) => await fetch(`https://api.telegram.or
 export const POST = async (req: NextRequest) => {
   try {
     const body: IPostBody = await req.json()
-    if(!(body.email || body.subject || body.description))
+    if(!(body.email && body.subject && body.description))
       return NextResponse.json({ message: "Mandatory label's missing."}, { status: 400 });
 
     const ip = req.headers.get('x-forwarded-for') || 'unknown';

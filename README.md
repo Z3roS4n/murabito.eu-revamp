@@ -61,6 +61,27 @@ Open http://localhost:3000 in your browser.
 
 The project is ready to deploy to Vercel. Link the repository and set any required environment variables in the Vercel dashboard. The default build command: `npm run build` and output is handled by Next.js.
 
+### Environment variables (needed)
+
+This project uses a few environment variables for backend features (rate limiting, Telegram notifications and Upstash Redis). Set them in `/.env.local` for local development and in your hosting provider (Vercel, Netlify) for production.
+
+- `HASH_SALT` — a random secret string used to salt IP hashes for rate limiting.
+- `TELEGRAM_BOT_TOKEN` — Telegram bot token used to forward contact form messages to a Telegram chat.
+- `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` — Upstash REST credentials used by `@upstash/redis` when calling `Redis.fromEnv()` (used by the rate limiter).
+
+Example `.env.local` (replace placeholders):
+
+```
+HASH_SALT="your-random-salt-here"
+TELEGRAM_BOT_TOKEN="123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11"
+UPSTASH_REDIS_REST_URL="https://us1-xxxxxxxx-xxxxxxxx.upstash.io"
+UPSTASH_REDIS_REST_TOKEN="your-upstash-token"
+```
+
+Notes:
+- Keep `HASH_SALT` and tokens secret. Don't commit `.env.local` to git.
+- If you deploy to Vercel, add these variables under Project Settings → Environment Variables.
+
 ### Contributing 🤝
 
 Contributions are welcome. Typical workflow:
