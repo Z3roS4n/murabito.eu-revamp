@@ -179,32 +179,32 @@ export default function Home() {
                       
                     />
                     <Project 
-                      image="converzia.png"
-                      title="ConverzIA"
-                      subtitle="Vanilla HTML/CSS/JS which interfaces with a TS Back-End Fastify server and OpenAI APIs."
-                      skills={['HTML/CSS', 'TypeScript', 'Fastify', 'OpenAI', 'REST']}
-                      link="https://github.com/Z3roS4n/ConverzIA.net"
+                      image="rag_demo.png"
+                      title="RAG Implementation"
+                      subtitle="Advanced Retrieval Augmented Generation implementation using OpenAI Embeddings."
+                      skills={['OpenAI', 'Prisma', 'Next.js', 'RAG', 'REST', 'PostgreSQL', 'Better-Auth']}
+                      link="https://github.com/Z3roS4n/ms-rag-demo"
                       direction="right"
 
                     />
                     <Project 
                       image="senes.png"
                       title="SenesGroup.it"
-                      subtitle="Developed in React.js, with a responsive design showcasing their services. Clean UI, SEO-optimized, and built for scalability."
+                      subtitle="Developed in React.js, with a responsive design showcasing their services. Clean UI & SEO-optimized."
                       skills={['React', 'TypeScript', 'SEO', 'CSS', 'Fastify']}
                       link="https://github.com/Z3roS4n/Development-Web-APIs"
                       viewOn="View Website"
                       direction="left"
 
                     />
-                    {/*<Project 
+                    {/*
+                    <Project 
                       image="webapis.png"
                       title="Web Utilities"
                       subtitle="Multi-service API architecture designed to provide various utilities for developers. Still ongoing..."
                       skills={['Fastify', 'TypeScript', 'Supabase', 'REST', 'PrismaORM']}
                       link="https://github.com/Z3roS4n/Development-Web-APIs"
                       direction="left"
-
                     />*/}
                   </div>
 
