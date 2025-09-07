@@ -1,7 +1,6 @@
 import ScrollDownButton from "@/components/ui/ScrollDownButton";
 import VenomBeam from "@/components/ui/venom-beam";
 import TypeWriter from '@/components/layout/TypeWriter';
-import BackgroundMeteors from "@/components/ui/backgroundmeteors";
 import { AnimatedTextGenerate } from "@/components/ui/animated-textgenerate";
 import CenteredImageCard from "@/components/ui/profilecard";
 import PortfolioDevStats from "@/components/layout/PortfolioDevStats";
@@ -9,6 +8,7 @@ import AnimatedHeadline from "@/components/ui/animated-headline";
 import Experience from "@/components/layout/Experience";
 import Project from "@/components/layout/Project";
 import Contact from "@/components/layout/Contact";
+import CookieBanner from "@/components/layout/CookieBanner";
 
 export const metadata = {
   title: 'Antonio Murabito — Web Developer & Designer / Sviluppatore Web e Designer',
@@ -86,8 +86,22 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="aboutme" className="relative lg:h-750 h-1430">
-          <BackgroundMeteors>      
+        <div id="aboutme" className="relative">
+          <div className="min-h-screen w-full dark:bg-black bg-white relative overflow-hidden">
+            {/* Blue Spotlight Background */}
+            <div
+              className="absolute inset-0 z-0 pointer-events-none dark:bg-[#0a0a0a] bg-[#ffffff]"
+              style={{
+                background: `
+                  radial-gradient(ellipse 110% 70% at 25% 80%, rgba(37, 99, 235, 0.10), transparent 40%),
+                  radial-gradient(ellipse 130% 60% at 75% 15%, rgba(59, 130, 246, 0.08), transparent 65%),
+                  radial-gradient(ellipse 80% 90% at 20% 30%, rgba(96, 165, 250, 0.12), transparent 20%),
+                  radial-gradient(ellipse 100% 40% at 60% 70%, rgba(14, 165, 233, 0.07), transparent 35%)
+                `,
+              }}
+            />
+
+            {/* Your Content Here */}
             <div className="flex flex-col justify-center items-center gap-20 mt-20">
               <div className="flex flex-col self-center items-center gap-7">
                 <section className="flex lg:flex-row flex-col-reverse self-center-safe lg:w-5/10 w-7/10 lg:gap-15 gap-7">
@@ -175,7 +189,7 @@ export default function Home() {
                       subtitle="Fully functional forum made with Next.js, Tailwind, PrismaORM & Clerk."
                       skills={['Next.js', 'TypeScript', 'Supabase', 'TailwindCSS', 'Clerk', 'PrismaORM']}
                       link="https://github.com/Z3roS4n/NextJS-Forum-Website"
-                      direction="left"
+                      direction="right"
                       
                     />
                     <Project 
@@ -194,18 +208,9 @@ export default function Home() {
                       skills={['React', 'TypeScript', 'SEO', 'CSS', 'Fastify']}
                       link="https://github.com/Z3roS4n/Development-Web-APIs"
                       viewOn="View Website"
-                      direction="left"
+                      direction="right"
 
                     />
-                    {/*
-                    <Project 
-                      image="webapis.png"
-                      title="Web Utilities"
-                      subtitle="Multi-service API architecture designed to provide various utilities for developers. Still ongoing..."
-                      skills={['Fastify', 'TypeScript', 'Supabase', 'REST', 'PrismaORM']}
-                      link="https://github.com/Z3roS4n/Development-Web-APIs"
-                      direction="left"
-                    />*/}
                   </div>
 
                 </section>
@@ -215,13 +220,13 @@ export default function Home() {
                     className="scroll-m-20 pb-2 text-5xl font-semibold tracking-tight first:mt-0"
                   />
                   <div className="flex flex-col gap-2">
-                    <Contact direction="left"/>
+                    <Contact direction="right"/>
                   </div>
 
                 </section>
               </div>
             </div>
-          </BackgroundMeteors>  
+          </div>
         </div>
       </main>
     </div>

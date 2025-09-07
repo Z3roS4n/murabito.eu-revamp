@@ -74,6 +74,37 @@ html {
   animation: wiggle 1.5s ease-in-out infinite;
 }
 
+@theme inline {
+  /* Variabili delle animazioni */
+  --animate-scroll-up: scroll-up-smooth var(--animation-duration, 40s) linear infinite;
+  --animate-scroll-down: scroll-down-smooth var(--animation-duration, 40s) linear infinite;
+
+  /* Keyframes scroll-up */
+  @keyframes scroll-up-smooth {
+    0% { transform: translateY(0%); }
+    100% { transform: translateY(-50%); }
+  }
+
+  /* Keyframes scroll-down */
+  @keyframes scroll-down-smooth {
+    0% { transform: translateY(-50%); }
+    100% { transform: translateY(0%); }
+  }
+}
+
+@theme inline {
+  /* Variabile per l'animazione */
+  --animate-shine: shine var(--animation-duration, 5s) linear infinite;
+
+  /* Keyframes shine */
+  @keyframes shine {
+    0% { background-position: 100%; }
+    100% { background-position: -100%; }
+  }
+}
+
+
+
 /* CUSTOM UI CLASSES */
 
 .button-primary {
