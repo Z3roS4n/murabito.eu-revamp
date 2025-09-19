@@ -8,7 +8,7 @@ export async function GET() {
   ];
   */
 
-  const staticRoutes = ["", "#projects", "#contact", "#projects"];
+  const staticRoutes = ["", "#projects", "#contact", "#projects", "/privacy-policy"];
 
   const allRoutes = [
     ...staticRoutes.map((route) => ({

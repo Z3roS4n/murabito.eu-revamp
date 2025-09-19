@@ -8,6 +8,8 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
+import CookieBanner from "@/components/layout/CookieBanner";
+import { CookieProvider } from "@/context/CookieContext";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -25,17 +27,19 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className={`${montserrat.variable} antialiased`}>
       <body className="overflow-x-hidden">
         <QueryClientProvider client={queryClient}>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="transition-all duration-100 min-h-screen bg-primary-foreground">
-              <div className="w-full flex justify-center">
-                <Navbar />
+          <CookieProvider>
+            <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+              <div className="transition-all duration-100 min-h-screen bg-primary-foreground">
+                <div className="w-full flex justify-center">
+                  <Navbar />
+                </div>
+                {children}
+                {/*<div>
+                  <Footer/>
+                </div>*/}
               </div>
-              {children}
-              {/*<div>
-                <Footer/>
-              </div>*/}
-            </div>
-          </ThemeProvider>
+            </ThemeProvider>
+          </CookieProvider>
         </QueryClientProvider>
       </body>
     </html>
