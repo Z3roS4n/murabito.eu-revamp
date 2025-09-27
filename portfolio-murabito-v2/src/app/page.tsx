@@ -9,6 +9,7 @@ import Experience from "@/components/layout/Experience";
 import Project from "@/components/layout/Project";
 import Contact from "@/components/layout/Contact";
 import CookieBanner from "@/components/layout/CookieBanner";
+import Footer from "@/components/layout/Footer";
 
 export const metadata = {
   title: 'Antonio Murabito — Web Developer & Designer / Sviluppatore Web e Designer',
@@ -225,6 +226,7 @@ export default function Home() {
 
                 </section>
               </div>
+              <Footer></Footer>
             </div>
           </div>
         </div>
