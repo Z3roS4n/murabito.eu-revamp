@@ -39,16 +39,29 @@ const Contact = ({ direction }: IContact) => {
   const sendMessage = useMutation({
     mutationFn: async ({ email, subject, description }: IPostBody) => {
       const body: IPostBody = {
-        email: email, 
-        subject: subject,
-        description: description
+        email,
+        subject,
+        description,
       };
-      const res = fetch(`/api/contact`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body)})
+
+      const res = await fetch(`/api/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(text || "Errore nell'invio del messaggio");
+      }
+
+      return res.json(); // torna il JSON dal tuo NextResponse
     },
     onSuccess: () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  })
+    },
+  });
+
   const containerRef = useRef<HTMLElement>(null);
   const isInView = useInView(containerRef, { margin: "-100px" });
 

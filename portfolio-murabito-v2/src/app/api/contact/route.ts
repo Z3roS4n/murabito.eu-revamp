@@ -16,6 +16,10 @@ const sendMessage = async (text: string) => await fetch(`https://api.telegram.or
 
 export const POST = async (req: NextRequest) => {
   try {
+    if (req.method !== "POST") {
+      return NextResponse.json({ message: "Method not allowed" }, { status: 405 });
+    }
+
     const body: IPostBody = await req.json()
     if(!(body.email && body.subject && body.description))
       return NextResponse.json({ message: "Mandatory label's missing."}, { status: 400 });
