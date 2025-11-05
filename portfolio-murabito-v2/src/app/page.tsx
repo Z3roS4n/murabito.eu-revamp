@@ -185,32 +185,29 @@ export default function Home() {
                   />
                   <div className="flex lg:flex-row flex-col gap-2">
                     <Project 
-                      image="msforum.png"
+                      image="Forum.png"
                       title="MSForum"
                       subtitle="Fully functional forum made with Next.js, Tailwind, PrismaORM & Clerk."
                       skills={['Next.js', 'TypeScript', 'Supabase', 'TailwindCSS', 'Clerk', 'PrismaORM']}
                       link="https://github.com/Z3roS4n/NextJS-Forum-Website"
                       direction="right"
-                      
                     />
                     <Project 
-                      image="rag_demo.png"
+                      image="RAG.png"
                       title="RAG Implementation"
                       subtitle="Advanced Retrieval Augmented Generation implementation using OpenAI Embeddings."
                       skills={['OpenAI', 'Prisma', 'Next.js', 'RAG', 'REST', 'PostgreSQL', 'Better-Auth']}
                       link="https://github.com/Z3roS4n/ms-rag-demo"
                       direction="right"
-
                     />
                     <Project 
-                      image="senes.png"
+                      image="Senes.png"
                       title="SenesGroup.it"
                       subtitle="Developed in React.js, with a responsive design showcasing their services. Clean UI & SEO-optimized."
                       skills={['React', 'TypeScript', 'SEO', 'CSS', 'Fastify']}
                       link="https://github.com/Z3roS4n/Development-Web-APIs"
                       viewOn="View Website"
                       direction="right"
-
                     />
                   </div>
 
