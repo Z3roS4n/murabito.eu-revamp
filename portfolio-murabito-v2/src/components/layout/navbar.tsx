@@ -4,6 +4,7 @@ import Image from "next/image";
 import { HandMetal, Boxes, Home, Phone, Laptop, Moon, Sun } from 'lucide-react';
 import NavbarFlow from "../ui/navbar-flow";
 import { ThemeSwitch } from "../ui/theme-switch";
+import { useTheme } from "next-themes";
 
 const Navbar = () => {
 
@@ -14,10 +15,12 @@ const Navbar = () => {
     { text: "Projects", icon: <Phone />, url: '#projects', submenu: false, submenus: {} },
   ]
 
+  const theme = useTheme();
+
   return (
     <div className="flex flex-col w-full fixed z-100">
       <NavbarFlow
-        emblem={<div>ANTONIO</div>}
+        emblem={<Image src={theme.theme == "dark" ? "/logo_White.svg" : "/logo_dark.svg"} width={35} height={30} alt="logo"></Image>}
         links={navLinks}
         rightComponent={
           <ThemeSwitch
