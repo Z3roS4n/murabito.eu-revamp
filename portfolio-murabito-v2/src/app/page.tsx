@@ -201,7 +201,7 @@ export default function Home() {
                       direction="right"
                     />
                     <Project 
-                      image="Senes.png"
+                      image="Senes_web.png"
                       title="SenesGroup.it"
                       subtitle="Developed in React.js, with a responsive design showcasing their services. Clean UI & SEO-optimized."
                       skills={['React', 'TypeScript', 'SEO', 'CSS', 'Fastify']}
@@ -210,7 +210,6 @@ export default function Home() {
                       direction="right"
                     />
                   </div>
-
                 </section>
                 <section id="contact" className="flex flex-col self-center-safe lg:w-5/10 w-7/10">
                   <AnimatedHeadline
