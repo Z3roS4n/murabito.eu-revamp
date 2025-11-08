@@ -176,7 +176,7 @@ export default function StatsCount({
           <span className="hidden sm:inline">
             {title.includes("WITH") ? (
               <h1 className="scroll-m-20 pb-2 text-5xl font-semibold tracking-tight first:mt-0">
-                My journey as a Web Developer in the last 2 years.
+                My journey as a Web Developer in the last {new Date().getFullYear() - 2023} years.
               </h1>
             ) : (
               title
@@ -187,7 +187,7 @@ export default function StatsCount({
           >
             {title.includes("WITH") ? (
               <h1 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
-                My journey as a Web Developer in the last 2 years.
+                My journey as a Web Developer in the last {new Date().getFullYear() - 2023} years.
               </h1>
             ) : (
               <span>{title}</span>

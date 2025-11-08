@@ -10,6 +10,7 @@ import Project from "@/components/layout/Project";
 import Contact from "@/components/layout/Contact";
 import CookieBanner from "@/components/layout/CookieBanner";
 import Footer from "@/components/layout/Footer";
+import { getTranslations } from "next-intl/server";
 
 export const metadata = {
   title: 'Antonio Murabito — Web Developer & Designer / Sviluppatore Web e Designer',
@@ -64,20 +65,31 @@ export const metadata = {
   }
 };
 
-export default function Home() {
+export default async function Home() {
+
+  const t = await getTranslations("homepage");
+  const th = (node: string) => t(`hero.${node}`);
+  const tabout = (node: string) => t(`about.${node}`);
+
+  const highlightWords: string[] = tabout("highlightWords").split(",").map(word => word.trim());
+  const twWords: string[] = th("typewriterWords").split(",").map(word => word.trim());
+  const twWordsAbout: string[] = tabout("typewriterWords").split(",").map(word => word.trim());
+
   return (
     <div>
       <main>
         <div className="relative overflow-hidden min-h-screen">
           <VenomBeam className="flex items-center justify-center flex-col px-4 w-full min-h-screen">
             <h2 className="bg-clip-text items-center text-transparent text-center bg-gradient-to-r from-neutral-900 to-neutral-500 dark:from-neutral-500 dark:to-white text-4xl md:text-5xl lg:text-7xl font-sans pb-1 md:pb-2 pt-2 md:pt-4 relative z-20 font-bold tracking-tight leading-tight">
-              I turn ideas into
+              {th("headline")}
               <br/>
-              <TypeWriter color="bg-gradient-to-l dark:from-blue-300 from-blue-700 to-blue-500" words={['websites', 'real products', 'experiences', 'digital solutions', 'useful tools', 'awesome designs']}/>
+              <TypeWriter
+                color="bg-gradient-to-l dark:from-blue-300 from-blue-700 to-blue-500"
+                words={twWords}
+              />
             </h2>
             <p className="max-w-xl mx-auto text-base lg:text-xl md:text-lg text-neutral-700 dark:text-neutral-400 text-center mt-1">
-              I build modern, performant web applications where clean code meets thoughtful design.  
-              From frontend to backend, I turn ideas into engaging digital experiences.
+              {th("description")}
             </p>
           </VenomBeam>
           <div className="absolute inset-0 flex items-end justify-center">
@@ -127,18 +139,18 @@ export default function Home() {
 
                   <div className="flex flex-col self-start">
                     <h1 className="head-text">
-                      I’m Antonio Murabito
+                      {tabout("title")}
                       <br />
-                      your <TypeWriter className="font-bold" color="text-blue-500" words={['Web Developer', 'Graphic Designer']}/>
+                      {tabout("your")} <TypeWriter className="font-bold" color="text-blue-500" words={twWordsAbout}/>
                     </h1>
 
                     <AnimatedTextGenerate
                       className="text-center self-start"
                       textClassName="font-normal text-center"
-                      text={"I thrive where code meets creativity, transforming ideas into visuals and interactive experiences that communicate more effectively than words alone. From sleek interfaces to bold branding, I make your digital presence memorable, meaningful, and unmistakably yours."}
+                      text={tabout("description")}
                       blurEffect
                       speed={0.00001}
-                      highlightWords={["creativity", "experiences", "memorable"]}
+                      highlightWords={highlightWords}
                       highlightClassName="text-blue-500 dark:text-blue-500 font-bold"
                     />
                   </div>

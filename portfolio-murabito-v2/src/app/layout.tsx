@@ -10,6 +10,8 @@ import {
 } from '@tanstack/react-query'
 import CookieBanner from "@/components/layout/CookieBanner";
 import { CookieProvider } from "@/context/CookieContext";
+import { NextIntlClientProvider } from "next-intl";
+import { routing } from "@/i18n/routing";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -29,15 +31,7 @@ export default function RootLayout({
         <QueryClientProvider client={queryClient}>
           <CookieProvider>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-              <div className="transition-all duration-100 min-h-screen bg-primary-foreground">
-                <div className="w-full flex justify-center">
-                  <Navbar />
-                </div>
-                {children}
-                {/*<div>
-                  <Footer/>
-                </div>*/}
-              </div>
+              {children}
             </ThemeProvider>
           </CookieProvider>
         </QueryClientProvider>

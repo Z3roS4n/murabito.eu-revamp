@@ -1,0 +1,84 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About Me",
+    "experiences": "Experiences",
+    "projects": "Projects"
+  },
+  "homepage": {
+    "hero": {
+      "headline": "I turn your ideas into",
+      "typewriterWords": "websites, real products, experiences, digital solutions, useful tools, extraordinary designs",
+      "description": "I create modern, high-performance web applications where clean code meets thoughtful design. From frontend to backend, I transform ideas into engaging digital experiences.",
+      "scrollDown": "Scroll down"
+    },
+    "about": {
+      "title": "I am Antonio Murabito",
+      "your": "your",
+      "typewriterWords": "Web Developer, Graphic Designer",
+      "bio": "Web developer and graphic designer. I combine code and creativity to create engaging digital experiences and effective visuals.",
+      "description": "I feel at ease where code meets creativity, transforming ideas into visuals and interactive interfaces that speak louder than words. From clean designs to bold brands, I make your digital presence memorable, meaningful, and unmistakable.",
+      "highlightWords": "creativity, experiences, memorable",
+      "position": "Full Stack Web Developer",
+      "github": "GitHub Profile",
+      "instagram": "Instagram Profile"
+    },
+    "stats": {
+      "title": "Developer Statistics",
+      "description": "Overview of my activities and portfolio projects."
+    },
+    "experiences": {
+      "experience1": {
+        "title": "Full-Stack Developer",
+        "subtitle": "Freelancer at BDGROUPSRL 2025 - PRESENT",
+        "description": "Currently working as a freelance web developer for BDGROUPSRL, focusing on API server optimization and authentication system development. I improve server performance, implement security protocols, and optimize database queries to enhance overall system efficiency. I use modern technologies to deliver scalable and secure web solutions for enterprise applications.",
+        "skills": "Next.js, ExpressJS, TypeScript, MySQL, JWT, TailwindCSS, Python"
+      },
+      "experience2": {
+        "title": "Graphic Designer & SMM",
+        "subtitle": "Freelancer at Socialnet 2025 - PRESENT",
+        "description": "In 2025, I co-founded Socialnet, a Social Media Management & Marketing agency. We offer social media management, engaging visual content creation, and communication strategies for businesses and professionals. Our goal is to improve clients' digital image, increasing visibility and online engagement.",
+        "skills": "Photoshop, Illustrator, Figma, Copywriting, Planning"
+      },
+      "experience3": {
+        "title": "Web Developer",
+        "subtitle": "Freelancer at BDGROUPSRL 2021 - PRESENT",
+        "description": "Since 2021, I have worked as a freelance web developer, specializing in designing and building modern, dynamic, and customized websites for businesses and individuals. My goal is to provide functional, intuitive, and SEO-optimized solutions that maximize online visibility. I use modern technologies to create responsive platforms optimized for user experience, handling databases and performance. I also collaborate with organizations like Senes Cooperativa Sociale.",
+        "skills": "Fastify, Supabase, PrismaORM, BetterAuth, Next.js, TailwindCSS, React"
+      }
+    },
+    "projects": {
+      "project1": {
+        "title": "MSForum",
+        "subtitle": "Fully functional forum built with Next.js, Tailwind, PrismaORM, and Clerk.",
+        "skills": "Next.js, TypeScript, Supabase, TailwindCSS, Clerk, PrismaORM",
+        "viewOn": "View on GitHub"
+      },
+      "project2": {
+        "title": "RAG Implementation",
+        "subtitle": "Advanced implementation of Retrieval Augmented Generation with OpenAI Embeddings.",
+        "skills": "OpenAI, Prisma, Next.js, RAG, REST, PostgreSQL, Better-Auth",
+        "viewOn": "View on GitHub"
+      },
+      "project3": {
+        "title": "SenesGroup.it",
+        "subtitle": "Developed in React.js with responsive design and clean UI, optimized for SEO and business services.",
+        "skills": "React, TypeScript, SEO, CSS, Fastify",
+        "viewOn": "Visit Website"
+      }
+    },
+    "contact": {
+      "title": "Let's stay in touch",
+      "description": "Contact me for collaborations, freelance projects, or to bring your creative idea to life."
+    },
+    "footer": {
+      "rights": "All rights reserved.",
+      "createdBy": "Designed and developed by Antonio Murabito"
+    },
+    "cookieBanner": {
+      "message": "This website uses cookies to enhance user experience.",
+      "accept": "Accept",
+      "decline": "Decline"
+    }
+  }
+}
