@@ -2,7 +2,7 @@
 
 import { IPostBody } from "@/app/api/contact/route";
 import { useMutation, useQuery } from "@tanstack/react-query";
-import { useRef, useState } from "react";
+import { use, useRef, useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import { AnimatedButton } from "../ui/animated-button";
 import { Input } from "../ui/input";
@@ -13,12 +13,14 @@ import { Textarea } from "../ui/textarea";
 import { Github, Instagram, Linkedin } from "lucide-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 interface IContact {
   direction: string;
 }
 
 const Contact = ({ direction }: IContact) => {  
+  const t = useTranslations("homepage.contact");
 
   const [email, setEmail] = useState<string>("");
   const [subject, setSubject] = useState<string>("");
@@ -86,22 +88,22 @@ const Contact = ({ direction }: IContact) => {
           <div className="flex lg:flex-row flex-col gap-3 w-full">
             <SpotlightCard className="dark:bg-black h-full lg:w-6/7" spotlightColor="34, 150, 238">
               <div className="w-full h-full flex flex-col justify-center items-center  gap-2">
-                <h3 className="text-xl font-semibold mb-0">Describe your project</h3>
+                <h3 className="text-xl font-semibold mb-0">{t("form.title")}</h3>
                 <p className="bg-clip-text text-transparent bg-gradient-to-l dark:from-blue-300 from-blue-700 to-blue-500 font-semibold">I will contact you back as soon as possible</p>
                 <form className="lg:w-4/5">
                   <div className="flex flex-col space-y-4 w-1/1">
                     <div className="flex flex-col space-y-1.5 w-1/1">
-                      <label htmlFor="subject" className="text-sm font-light opacity-80">Subject</label>
+                      <label htmlFor="subject" className="text-sm font-light opacity-80">{t("form.subject")}</label>
                       <Input onChange={(e) => setSubject(e.target.value)}/>
-                      <label htmlFor="email" className="text-sm font-light opacity-80">Email</label>
+                      <label htmlFor="email" className="text-sm font-light opacity-80">{t("form.email")}</label>
                       <Input type="email" onChange={(e) => setEmail(e.target.value)}/>
-                      <label htmlFor="email" className="text-sm font-light opacity-80">Description</label>
+                      <label htmlFor="email" className="text-sm font-light opacity-80">{t("form.description")}</label>
                       <Textarea className="max-h-30 break-all" minLength={150} maxLength={1000} onChange={(e) => setDescription(e.target.value)}/>
                     </div>
                     <div className="flex flex-col space-y-1.5">
                       <Button
                         disabled={!verifyForm()}
-                        onClick={() => sendMessage.mutate({ email: email ?? "", subject: subject ?? "", description: description ?? "" })}>Send your Idea</Button>
+                        onClick={() => sendMessage.mutate({ email: email ?? "", subject: subject ?? "", description: description ?? "" })}>{t("form.send")}</Button>
                     </div>
                   </div>
                 </form>

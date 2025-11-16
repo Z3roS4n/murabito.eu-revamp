@@ -28,6 +28,7 @@
       "description": "Panoramica sull’attività e i progetti del portfolio."
     },
     "experiences": {
+      "title": "Esperienza personle e lavorativa",
       "experience1": {
         "title": "Full-Stack Developer",
         "subtitle": "Freelancer presso BDGROUPSRL 2025 - ATTUALE",
@@ -48,6 +49,7 @@
       }
     },
     "projects": {
+      "title": "Alcuni dei miei progetti di sviluppo",
       "project1": {
         "title": "MSForum",
         "subtitle": "Forum completamente funzionale realizzato con Next.js, Tailwind, PrismaORM e Clerk.",
@@ -69,16 +71,46 @@
     },
     "contact": {
       "title": "Rimaniamo in contatto",
-      "description": "Contattami per collaborazioni, progetti freelance o per dare vita a una tua idea creativa."
+      "description": "Contattami per collaborazioni, progetti freelance o per dare vita a una tua idea creativa.",
+      "form": {
+        "title": "Descrivi il tuo progetto",
+        "subject": "Oggetto",
+        "email": "Email",
+        "description": "Descrizione",
+        "send": "Invia la tua idea"
+      }
     },
     "footer": {
       "rights": "Tutti i diritti riservati.",
       "createdBy": "Progettato e sviluppato da Antonio Murabito"
     },
     "cookieBanner": {
-      "message": "Questo sito utilizza cookie per migliorare l’esperienza utente.",
-      "accept": "Accetta",
-      "decline": "Rifiuta"
+      "title": "Questo sito utilizza i cookie",
+      "description": "Utilizziamo cookie propri e di terze parti per migliorare la tua esperienza, analizzare il traffico e personalizzare i contenuti pubblicitari. Puoi accettare tutti i cookie o gestire le tue preferenze.",
+      "acceptAll": "Accetta tutti i cookie",
+      "managePreferences": "Gestisci preferenze",
+      "preferences": {
+        "title": "Gestisci le tue preferenze sui cookie",
+        "description": "Puoi modificare le tue preferenze sui cookie in qualsiasi momento. Per maggiori informazioni, consulta la nostra Politica sulla Privacy.",
+        "necessary": {
+          "title": "Cookie necessari",
+          "description": "Questi cookie sono essenziali per il funzionamento del sito e non possono essere disabilitati nei nostri sistemi."
+        },
+        "analytics": {
+          "title": "Cookie analitici",
+          "description": "Questi cookie ci aiutano a capire come i visitatori interagiscono con il sito, raccogliendo e riportando informazioni in modo anonimo."
+        },
+        "marketing": {
+          "title": "Cookie di marketing",
+          "description": "Questi cookie vengono utilizzati per tracciare i visitatori attraverso i siti web. L'intento è quello di mostrare annunci pertinenti e coinvolgenti per l'utente individuale."
+        },
+        "tracking": {
+          "title": "Cookie di tracciamento",
+          "description": "Questi cookie monitorano il comportamento degli utenti sul sito per migliorare l'esperienza utente e fornire contenuti personalizzati."
+        },
+        "savePreferences": "Salva preferenze",
+        "cancel": "Annulla"
+      }
     }
   }
 }

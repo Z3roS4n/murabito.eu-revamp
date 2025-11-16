@@ -70,6 +70,8 @@ export default async function Home() {
   const t = await getTranslations("homepage");
   const th = (node: string) => t(`hero.${node}`);
   const tabout = (node: string) => t(`about.${node}`);
+  const texp = (node: string) => t(`experiences.${node}`);
+  const tproj = (node: string) => t(`projects.${node}`);
 
   const highlightWords: string[] = tabout("highlightWords").split(",").map(word => word.trim());
   const twWords: string[] = th("typewriterWords").split(",").map(word => word.trim());
@@ -160,29 +162,29 @@ export default async function Home() {
                 </section>
                 <section id="experiences" className="flex flex-col self-center-safe lg:w-5/10 w-7/10">
                   <AnimatedHeadline
-                    title="Personal and work experiences"
+                    title={texp("title")}
                     className="scroll-m-20 pb-2 text-5xl font-semibold tracking-tight first:mt-0"
                   />
                   <div className="flex flex-col gap-2">
                     <Experience 
-                      title="Full-Stack Developer"
-                      subtitle="Freelancer at BDGROUPSRL 2025 - CURRENT"
-                      description="Currently working as a freelance Web Developer for BDGROUPSRL, focusing on API server optimization and authentication system development. My role involves improving server performance, implementing secure authentication protocols, and optimizing database queries to enhance overall system efficiency. I work with modern technologies to ensure scalable and secure web solutions for enterprise-level applications."
+                      title={texp("experience1.title")}
+                      subtitle={texp("experience1.subtitle")}
+                      description={texp("experience1.description")}
                       skills={['Next.js', 'ExpressJS', 'TypeScript', 'MySQL', 'JWT', 'TailwindCSS', 'Python']}
                       direction="left"
                     />
                     <Experience 
-                      title="Graphic Designer & SMM"
-                      subtitle="Self-Employed at Socialnet 2025 - CURRENT"
-                      description="In 2025, I co-founded Socialnet, a Social Media Management & Marketing agency. We offer social media management services, creation of engaging visual content, and development of communication strategies for businesses and professionals. Our goal is to improve our clients' digital image, increasing their visibility and online engagement."
+                      title={texp("experience2.title")}
+                      subtitle={texp("experience2.subtitle")}
+                      description={texp("experience2.description")}
                       skills={['Photoshop', 'Illustrator', 'Figma', 'Copywriting', 'Planning']}
                       direction="right"
 
                     />                  
                     <Experience 
-                      title="Web Developer"
-                      subtitle="Freelancer at BDGROUPSRL 2025 - CURRENT"
-                      description="Since 2021, I've been working as a freelance Web Developer, specializing in the design and development of modern, dynamic, and customized websites for businesses and individuals. My goal is to provide functional, user-friendly, and SEO-optimized solutions to ensure maximum online visibility for my clients. I use modern technologies to create functional, responsive, and user experience-optimized platforms, including full-stack development, database optimization, and performance tuning. I also collaborate with companies like Senes Cooperativa Sociale!"
+                      title={texp("experience3.title")}
+                      subtitle={texp("experience3.subtitle")}
+                      description={texp("experience3.description")}
                       skills={['Fastify', 'Supabase', 'PrismaORM', 'BetterAuth', 'Next.js', 'TailwindCSS', 'React']}
                       direction="left"
 
@@ -192,40 +194,42 @@ export default async function Home() {
                 </section>
                 <section id="projects" className="flex flex-col self-center-safe lg:w-5/10 w-7/10">
                   <AnimatedHeadline
-                    title="Some of my coding projects"
+                    title={tproj("title")}
                     className="scroll-m-20 pb-2 text-5xl font-semibold tracking-tight first:mt-0"
                   />
                   <div className="flex lg:flex-row flex-col gap-2">
                     <Project 
                       image="Forum.png"
-                      title="MSForum"
-                      subtitle="Fully functional forum made with Next.js, Tailwind, PrismaORM & Clerk."
+                      title={tproj("project1.title")}
+                      subtitle={tproj("project1.subtitle")}
                       skills={['Next.js', 'TypeScript', 'Supabase', 'TailwindCSS', 'Clerk', 'PrismaORM']}
                       link="https://github.com/Z3roS4n/NextJS-Forum-Website"
+                      viewOn={tproj("project1.viewOn")}
                       direction="right"
                     />
                     <Project 
                       image="RAG.png"
-                      title="RAG Implementation"
-                      subtitle="Advanced Retrieval Augmented Generation implementation using OpenAI Embeddings."
+                      title={tproj("project2.title")}
+                      subtitle={tproj("project2.subtitle")}
                       skills={['OpenAI', 'Prisma', 'Next.js', 'RAG', 'REST', 'PostgreSQL', 'Better-Auth']}
                       link="https://github.com/Z3roS4n/ms-rag-demo"
+                      viewOn={tproj("project2.viewOn")}
                       direction="right"
                     />
                     <Project 
                       image="Senes_web.png"
-                      title="SenesGroup.it"
-                      subtitle="Developed in React.js, with a responsive design showcasing their services. Clean UI & SEO-optimized."
+                      title={tproj("project3.title")}
+                      subtitle={tproj("project3.subtitle")}
                       skills={['React', 'TypeScript', 'SEO', 'CSS', 'Fastify']}
                       link="https://github.com/Z3roS4n/Development-Web-APIs"
-                      viewOn="View Website"
+                      viewOn={tproj("project3.viewOn")}
                       direction="right"
                     />
                   </div>
                 </section>
                 <section id="contact" className="flex flex-col self-center-safe lg:w-5/10 w-7/10">
                   <AnimatedHeadline
-                    title="Let's get in touch"
+                    title={t("homepage.contact.title")}
                     className="scroll-m-20 pb-2 text-5xl font-semibold tracking-tight first:mt-0"
                   />
                   <div className="flex flex-col gap-2">
