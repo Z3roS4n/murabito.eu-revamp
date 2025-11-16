@@ -9,6 +9,7 @@ import {
   useInView,
 } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 interface StatItem {
   value: number;
@@ -148,6 +149,8 @@ export default function StatsCount({
   showDividers = true,
   className = "",
 }: StatsCountProps) {
+  const t = useTranslations("homepage.stats");
+
   const containerRef = useRef<HTMLElement>(null);
   const isInView = useInView(containerRef, { margin: "-100px" });
 
@@ -176,7 +179,7 @@ export default function StatsCount({
           <span className="hidden sm:inline">
             {title.includes("WITH") ? (
               <h1 className="scroll-m-20 pb-2 text-5xl font-semibold tracking-tight first:mt-0">
-                My journey as a Web Developer in the last {new Date().getFullYear() - 2023} years.
+                {t("title", { years: new Date().getFullYear() - 2023 })}
               </h1>
             ) : (
               title
@@ -187,7 +190,7 @@ export default function StatsCount({
           >
             {title.includes("WITH") ? (
               <h1 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
-                My journey as a Web Developer in the last {new Date().getFullYear() - 2023} years.
+                {t("title", { years: new Date().getFullYear() - 2023 })}
               </h1>
             ) : (
               <span>{title}</span>

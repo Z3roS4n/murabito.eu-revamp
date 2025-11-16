@@ -24,8 +24,7 @@
       "instagram": "Profilo Instagram"
     },
     "stats": {
-      "title": "Statistiche sviluppatore",
-      "description": "Panoramica sull’attività e i progetti del portfolio."
+      "title": "La mia esperienza come sviluppatore web negli ultimi {years} anni"
     },
     "experiences": {
       "title": "Esperienza personle e lavorativa",
