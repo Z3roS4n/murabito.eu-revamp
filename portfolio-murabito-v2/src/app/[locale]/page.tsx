@@ -229,16 +229,16 @@ export default async function Home() {
                 </section>
                 <section id="contact" className="flex flex-col self-center-safe lg:w-5/10 w-7/10">
                   <AnimatedHeadline
-                    title={t("homepage.contact.title")}
+                    title={t("contact.title")}
                     className="scroll-m-20 pb-2 text-5xl font-semibold tracking-tight first:mt-0"
                   />
                   <div className="flex flex-col gap-2">
                     <Contact direction="right"/>
                   </div>
-
+                  
                 </section>
+                <Footer/>
               </div>
-              <Footer></Footer>
             </div>
           </div>
         </div>
