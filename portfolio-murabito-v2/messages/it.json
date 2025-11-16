@@ -1,0 +1,115 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "Chi sono",
+    "experiences": "Esperienze",
+    "projects": "Progetti"
+  },
+  "homepage": {
+    "hero": {
+      "headline": "Trasformo le tue idee in",
+      "typewriterWords": "siti web, prodotti reali, esperienze, soluzioni digitali, strumenti utili, design straordinari",
+      "description": "Realizzo applicazioni web moderne e performanti, dove il codice pulito incontra un design curato. Dal frontend al backend, trasformo le idee in esperienze digitali coinvolgenti.",
+      "scrollDown": "Scorri in basso"
+    },
+    "about": {
+      "title": "Sono Antonio Murabito",
+      "your": "il tuo",
+      "typewriterWords": "Web Developer, Graphic Designer",
+      "bio": "Sviluppatore web e graphic designer. Unisco codice e creatività per dare vita a esperienze digitali coinvolgenti e visual efficaci.",
+      "description": "Mi trovo a mio agio dove il codice incontra la creatività, trasformando le idee in visual e interfacce interattive che comunicano più di mille parole. Dai design puliti ai brand audaci, rendo la tua presenza digitale memorabile, significativa e inconfondibile.",
+      "highlightWords": "creatività, esperienze, memorabile",
+      "position": "Full Stack Web Developer",
+      "github": "Profilo GitHub",
+      "instagram": "Profilo Instagram"
+    },
+    "stats": {
+      "title": "La mia esperienza come sviluppatore web negli ultimi {years} anni"
+    },
+    "experiences": {
+      "title": "Esperienza personle e lavorativa",
+      "experience1": {
+        "title": "Full-Stack Developer",
+        "subtitle": "Freelancer presso BDGROUPSRL 2025 - ATTUALE",
+        "description": "Attualmente lavoro come sviluppatore web freelance per BDGROUPSRL, concentrandomi sull’ottimizzazione dei server API e sullo sviluppo di sistemi di autenticazione. Mi occupo di migliorare le prestazioni dei server, implementare protocolli di sicurezza e ottimizzare le query al database per aumentare l’efficienza complessiva del sistema. Utilizzo tecnologie moderne per garantire soluzioni web scalabili e sicure per applicazioni enterprise.",
+        "skills": "Next.js, ExpressJS, TypeScript, MySQL, JWT, TailwindCSS, Python"
+      },
+      "experience2": {
+        "title": "Graphic Designer & SMM",
+        "subtitle": "Libero professionista presso Socialnet 2025 - ATTUALE",
+        "description": "Nel 2025 ho co-fondato Socialnet, un’agenzia di Social Media Management & Marketing. Offriamo servizi di gestione social, creazione di contenuti visivi coinvolgenti e sviluppo di strategie di comunicazione per aziende e professionisti. L’obiettivo è migliorare l’immagine digitale dei nostri clienti, aumentandone la visibilità e l’interazione online.",
+        "skills": "Photoshop, Illustrator, Figma, Copywriting, Pianificazione"
+      },
+      "experience3": {
+        "title": "Web Developer",
+        "subtitle": "Freelancer presso BDGROUPSRL 2021 - ATTUALE",
+        "description": "Dal 2021 lavoro come sviluppatore web freelance, specializzato nella progettazione e realizzazione di siti moderni, dinamici e personalizzati per aziende e privati. Il mio obiettivo è offrire soluzioni funzionali, intuitive e ottimizzate per la SEO, assicurando la massima visibilità online ai clienti. Utilizzo tecnologie moderne per creare piattaforme responsive e ottimizzate per l’esperienza utente, curando anche database e performance. Collaboro inoltre con realtà come Senes Cooperativa Sociale!",
+        "skills": "Fastify, Supabase, PrismaORM, BetterAuth, Next.js, TailwindCSS, React"
+      }
+    },
+    "projects": {
+      "title": "Alcuni dei miei progetti di sviluppo",
+      "project1": {
+        "title": "MSForum",
+        "subtitle": "Forum completamente funzionale realizzato con Next.js, Tailwind, PrismaORM e Clerk.",
+        "skills": "Next.js, TypeScript, Supabase, TailwindCSS, Clerk, PrismaORM",
+        "viewOn": "Vedi su GitHub"
+      },
+      "project2": {
+        "title": "Implementazione RAG",
+        "subtitle": "Implementazione avanzata di Retrieval Augmented Generation con OpenAI Embeddings.",
+        "skills": "OpenAI, Prisma, Next.js, RAG, REST, PostgreSQL, Better-Auth",
+        "viewOn": "Vedi su GitHub"
+      },
+      "project3": {
+        "title": "SenesGroup.it",
+        "subtitle": "Sviluppato in React.js, con design responsive e UI pulita, ottimizzato per la SEO e i servizi aziendali.",
+        "skills": "React, TypeScript, SEO, CSS, Fastify",
+        "viewOn": "Visita il sito"
+      }
+    },
+    "contact": {
+      "title": "Rimaniamo in contatto",
+      "description": "Contattami per collaborazioni, progetti freelance o per dare vita a una tua idea creativa.",
+      "form": {
+        "title": "Descrivi il tuo progetto",
+        "subject": "Oggetto",
+        "email": "Email",
+        "description": "Descrizione",
+        "send": "Invia la tua idea"
+      }
+    },
+    "footer": {
+      "rights": "Tutti i diritti riservati.",
+      "createdBy": "Progettato e sviluppato da Antonio Murabito"
+    },
+    "cookieBanner": {
+      "title": "Questo sito utilizza i cookie",
+      "description": "Utilizziamo cookie propri e di terze parti per migliorare la tua esperienza, analizzare il traffico e personalizzare i contenuti pubblicitari. Puoi accettare tutti i cookie o gestire le tue preferenze.",
+      "acceptAll": "Accetta tutti i cookie",
+      "managePreferences": "Gestisci preferenze",
+      "preferences": {
+        "title": "Gestisci le tue preferenze sui cookie",
+        "description": "Puoi modificare le tue preferenze sui cookie in qualsiasi momento. Per maggiori informazioni, consulta la nostra Politica sulla Privacy.",
+        "necessary": {
+          "title": "Cookie necessari",
+          "description": "Questi cookie sono essenziali per il funzionamento del sito e non possono essere disabilitati nei nostri sistemi."
+        },
+        "analytics": {
+          "title": "Cookie analitici",
+          "description": "Questi cookie ci aiutano a capire come i visitatori interagiscono con il sito, raccogliendo e riportando informazioni in modo anonimo."
+        },
+        "marketing": {
+          "title": "Cookie di marketing",
+          "description": "Questi cookie vengono utilizzati per tracciare i visitatori attraverso i siti web. L'intento è quello di mostrare annunci pertinenti e coinvolgenti per l'utente individuale."
+        },
+        "tracking": {
+          "title": "Cookie di tracciamento",
+          "description": "Questi cookie monitorano il comportamento degli utenti sul sito per migliorare l'esperienza utente e fornire contenuti personalizzati."
+        },
+        "savePreferences": "Salva preferenze",
+        "cancel": "Annulla"
+      }
+    }
+  }
+}

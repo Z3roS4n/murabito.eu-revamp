@@ -1,0 +1,115 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About Me",
+    "experiences": "Experiences",
+    "projects": "Projects"
+  },
+  "homepage": {
+    "hero": {
+      "headline": "I transform your ideas into",
+      "typewriterWords": "websites, real products, experiences, digital solutions, useful tools, extraordinary designs",
+      "description": "I create modern and high-performance web applications, where clean code meets refined design. From frontend to backend, I turn ideas into engaging digital experiences.",
+      "scrollDown": "Scroll down"
+    },
+    "about": {
+      "title": "I’m Antonio Murabito",
+      "your": "your",
+      "typewriterWords": "Web Developer, Graphic Designer",
+      "bio": "Web developer and graphic designer. I blend code and creativity to bring compelling digital experiences and effective visuals to life.",
+      "description": "I’m at my best where code meets creativity, turning ideas into visuals and interactive interfaces that communicate more than words ever could. From clean designs to bold branding, I make your digital presence memorable, meaningful, and unmistakable.",
+      "highlightWords": "creativity, experiences, memorable",
+      "position": "Full Stack Web Developer",
+      "github": "GitHub Profile",
+      "instagram": "Instagram Profile"
+    },
+    "stats": {
+      "title": "My journey as a web developer in the last {years} years"
+    },
+    "experiences": {
+      "title": "Personal and Work Experience",
+      "experience1": {
+        "title": "Full-Stack Developer",
+        "subtitle": "Freelancer at BDGROUPSRL 2025 - CURRENT",
+        "description": "I currently work as a freelance web developer for BDGROUPSRL, focusing on API server optimization and authentication system development. I handle performance improvements, implement security protocols, and optimize database queries to enhance overall system efficiency. I use modern technologies to ensure scalable and secure web solutions for enterprise applications.",
+        "skills": "Next.js, ExpressJS, TypeScript, MySQL, JWT, TailwindCSS, Python"
+      },
+      "experience2": {
+        "title": "Graphic Designer & SMM",
+        "subtitle": "Freelancer at Socialnet 2025 - CURRENT",
+        "description": "In 2025 I co-founded Socialnet, an agency specializing in Social Media Management & Marketing. We offer social media management, engaging visual content creation, and communication strategies for businesses and professionals. Our goal is to enhance the digital image of our clients, increasing their visibility and online engagement.",
+        "skills": "Photoshop, Illustrator, Figma, Copywriting, Planning"
+      },
+      "experience3": {
+        "title": "Web Developer",
+        "subtitle": "Freelancer at BDGROUPSRL 2021 - CURRENT",
+        "description": "Since 2021 I’ve been working as a freelance web developer, specializing in designing and developing modern, dynamic, and custom websites for companies and private clients. My goal is to deliver functional, intuitive, and SEO-optimized solutions that maximize online visibility. I use modern technologies to create responsive platforms optimized for user experience, while also handling databases and performance. I also collaborate with organizations like Senes Cooperativa Sociale!",
+        "skills": "Fastify, Supabase, PrismaORM, BetterAuth, Next.js, TailwindCSS, React"
+      }
+    },
+    "projects": {
+      "title": "Some of My Development Projects",
+      "project1": {
+        "title": "MSForum",
+        "subtitle": "Fully functional forum built with Next.js, Tailwind, PrismaORM, and Clerk.",
+        "skills": "Next.js, TypeScript, Supabase, TailwindCSS, Clerk, PrismaORM",
+        "viewOn": "View on GitHub"
+      },
+      "project2": {
+        "title": "RAG Implementation",
+        "subtitle": "Advanced Retrieval Augmented Generation implementation with OpenAI Embeddings.",
+        "skills": "OpenAI, Prisma, Next.js, RAG, REST, PostgreSQL, Better-Auth",
+        "viewOn": "View on GitHub"
+      },
+      "project3": {
+        "title": "SenesGroup.it",
+        "subtitle": "Developed in React.js with a responsive design and clean UI, optimized for SEO and company services.",
+        "skills": "React, TypeScript, SEO, CSS, Fastify",
+        "viewOn": "Visit the website"
+      }
+    },
+    "contact": {
+      "title": "Get in Touch",
+      "description": "Contact me for collaborations, freelance projects, or to bring your creative idea to life.",
+      "form": {
+        "title": "Describe Your Project",
+        "subject": "Subject",
+        "email": "Email",
+        "description": "Description",
+        "send": "Send Your Idea"
+      }
+    },
+    "footer": {
+      "rights": "All rights reserved.",
+      "createdBy": "Designed and developed by Antonio Murabito"
+    },
+    "cookieBanner": {
+      "title": "This site uses cookies",
+      "description": "We use first- and third-party cookies to improve your experience, analyze traffic, and personalize advertising content. You can accept all cookies or manage your preferences.",
+      "acceptAll": "Accept all cookies",
+      "managePreferences": "Manage preferences",
+      "preferences": {
+        "title": "Manage Your Cookie Preferences",
+        "description": "You can change your cookie preferences at any time. For more information, please check our Privacy Policy.",
+        "necessary": {
+          "title": "Necessary Cookies",
+          "description": "These cookies are essential for the website to function and cannot be disabled in our systems."
+        },
+        "analytics": {
+          "title": "Analytics Cookies",
+          "description": "These cookies help us understand how visitors interact with the site by collecting and reporting information anonymously."
+        },
+        "marketing": {
+          "title": "Marketing Cookies",
+          "description": "These cookies are used to track visitors across websites. The intention is to display relevant and engaging ads for the individual user."
+        },
+        "tracking": {
+          "title": "Tracking Cookies",
+          "description": "These cookies monitor user behavior on the site to improve the user experience and provide personalized content."
+        },
+        "savePreferences": "Save preferences",
+        "cancel": "Cancel"
+      }
+    }
+  }
+}

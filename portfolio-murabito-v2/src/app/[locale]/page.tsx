@@ -10,6 +10,7 @@ import Project from "@/components/layout/Project";
 import Contact from "@/components/layout/Contact";
 import CookieBanner from "@/components/layout/CookieBanner";
 import Footer from "@/components/layout/Footer";
+import { getTranslations } from "next-intl/server";
 
 export const metadata = {
   title: 'Antonio Murabito — Web Developer & Designer / Sviluppatore Web e Designer',
@@ -64,20 +65,33 @@ export const metadata = {
   }
 };
 
-export default function Home() {
+export default async function Home() {
+
+  const t = await getTranslations("homepage");
+  const th = (node: string) => t(`hero.${node}`);
+  const tabout = (node: string) => t(`about.${node}`);
+  const texp = (node: string) => t(`experiences.${node}`);
+  const tproj = (node: string) => t(`projects.${node}`);
+
+  const highlightWords: string[] = tabout("highlightWords").split(",").map(word => word.trim());
+  const twWords: string[] = th("typewriterWords").split(",").map(word => word.trim());
+  const twWordsAbout: string[] = tabout("typewriterWords").split(",").map(word => word.trim());
+
   return (
     <div>
       <main>
         <div className="relative overflow-hidden min-h-screen">
           <VenomBeam className="flex items-center justify-center flex-col px-4 w-full min-h-screen">
             <h2 className="bg-clip-text items-center text-transparent text-center bg-gradient-to-r from-neutral-900 to-neutral-500 dark:from-neutral-500 dark:to-white text-4xl md:text-5xl lg:text-7xl font-sans pb-1 md:pb-2 pt-2 md:pt-4 relative z-20 font-bold tracking-tight leading-tight">
-              I turn ideas into
+              {th("headline")}
               <br/>
-              <TypeWriter color="bg-gradient-to-l dark:from-blue-300 from-blue-700 to-blue-500" words={['websites', 'real products', 'experiences', 'digital solutions', 'useful tools', 'awesome designs']}/>
+              <TypeWriter
+                color="bg-gradient-to-l dark:from-blue-300 from-blue-700 to-blue-500"
+                words={twWords}
+              />
             </h2>
             <p className="max-w-xl mx-auto text-base lg:text-xl md:text-lg text-neutral-700 dark:text-neutral-400 text-center mt-1">
-              I build modern, performant web applications where clean code meets thoughtful design.  
-              From frontend to backend, I turn ideas into engaging digital experiences.
+              {th("description")}
             </p>
           </VenomBeam>
           <div className="absolute inset-0 flex items-end justify-center">
@@ -127,18 +141,18 @@ export default function Home() {
 
                   <div className="flex flex-col self-start">
                     <h1 className="head-text">
-                      I’m Antonio Murabito
+                      {tabout("title")}
                       <br />
-                      your <TypeWriter className="font-bold" color="text-blue-500" words={['Web Developer', 'Graphic Designer']}/>
+                      {tabout("your")} <TypeWriter className="font-bold" color="text-blue-500" words={twWordsAbout}/>
                     </h1>
 
                     <AnimatedTextGenerate
                       className="text-center self-start"
                       textClassName="font-normal text-center"
-                      text={"I thrive where code meets creativity, transforming ideas into visuals and interactive experiences that communicate more effectively than words alone. From sleek interfaces to bold branding, I make your digital presence memorable, meaningful, and unmistakably yours."}
+                      text={tabout("description")}
                       blurEffect
                       speed={0.00001}
-                      highlightWords={["creativity", "experiences", "memorable"]}
+                      highlightWords={highlightWords}
                       highlightClassName="text-blue-500 dark:text-blue-500 font-bold"
                     />
                   </div>
@@ -148,29 +162,29 @@ export default function Home() {
                 </section>
                 <section id="experiences" className="flex flex-col self-center-safe lg:w-5/10 w-7/10">
                   <AnimatedHeadline
-                    title="Personal and work experiences"
+                    title={texp("title")}
                     className="scroll-m-20 pb-2 text-5xl font-semibold tracking-tight first:mt-0"
                   />
                   <div className="flex flex-col gap-2">
                     <Experience 
-                      title="Full-Stack Developer"
-                      subtitle="Freelancer at BDGROUPSRL 2025 - CURRENT"
-                      description="Currently working as a freelance Web Developer for BDGROUPSRL, focusing on API server optimization and authentication system development. My role involves improving server performance, implementing secure authentication protocols, and optimizing database queries to enhance overall system efficiency. I work with modern technologies to ensure scalable and secure web solutions for enterprise-level applications."
+                      title={texp("experience1.title")}
+                      subtitle={texp("experience1.subtitle")}
+                      description={texp("experience1.description")}
                       skills={['Next.js', 'ExpressJS', 'TypeScript', 'MySQL', 'JWT', 'TailwindCSS', 'Python']}
                       direction="left"
                     />
                     <Experience 
-                      title="Graphic Designer & SMM"
-                      subtitle="Self-Employed at Socialnet 2025 - CURRENT"
-                      description="In 2025, I co-founded Socialnet, a Social Media Management & Marketing agency. We offer social media management services, creation of engaging visual content, and development of communication strategies for businesses and professionals. Our goal is to improve our clients' digital image, increasing their visibility and online engagement."
+                      title={texp("experience2.title")}
+                      subtitle={texp("experience2.subtitle")}
+                      description={texp("experience2.description")}
                       skills={['Photoshop', 'Illustrator', 'Figma', 'Copywriting', 'Planning']}
                       direction="right"
 
                     />                  
                     <Experience 
-                      title="Web Developer"
-                      subtitle="Freelancer at BDGROUPSRL 2025 - CURRENT"
-                      description="Since 2021, I've been working as a freelance Web Developer, specializing in the design and development of modern, dynamic, and customized websites for businesses and individuals. My goal is to provide functional, user-friendly, and SEO-optimized solutions to ensure maximum online visibility for my clients. I use modern technologies to create functional, responsive, and user experience-optimized platforms, including full-stack development, database optimization, and performance tuning. I also collaborate with companies like Senes Cooperativa Sociale!"
+                      title={texp("experience3.title")}
+                      subtitle={texp("experience3.subtitle")}
+                      description={texp("experience3.description")}
                       skills={['Fastify', 'Supabase', 'PrismaORM', 'BetterAuth', 'Next.js', 'TailwindCSS', 'React']}
                       direction="left"
 
@@ -180,49 +194,51 @@ export default function Home() {
                 </section>
                 <section id="projects" className="flex flex-col self-center-safe lg:w-5/10 w-7/10">
                   <AnimatedHeadline
-                    title="Some of my coding projects"
+                    title={tproj("title")}
                     className="scroll-m-20 pb-2 text-5xl font-semibold tracking-tight first:mt-0"
                   />
                   <div className="flex lg:flex-row flex-col gap-2">
                     <Project 
                       image="Forum.png"
-                      title="MSForum"
-                      subtitle="Fully functional forum made with Next.js, Tailwind, PrismaORM & Clerk."
+                      title={tproj("project1.title")}
+                      subtitle={tproj("project1.subtitle")}
                       skills={['Next.js', 'TypeScript', 'Supabase', 'TailwindCSS', 'Clerk', 'PrismaORM']}
                       link="https://github.com/Z3roS4n/NextJS-Forum-Website"
+                      viewOn={tproj("project1.viewOn")}
                       direction="right"
                     />
                     <Project 
                       image="RAG.png"
-                      title="RAG Implementation"
-                      subtitle="Advanced Retrieval Augmented Generation implementation using OpenAI Embeddings."
+                      title={tproj("project2.title")}
+                      subtitle={tproj("project2.subtitle")}
                       skills={['OpenAI', 'Prisma', 'Next.js', 'RAG', 'REST', 'PostgreSQL', 'Better-Auth']}
                       link="https://github.com/Z3roS4n/ms-rag-demo"
+                      viewOn={tproj("project2.viewOn")}
                       direction="right"
                     />
                     <Project 
                       image="Senes_web.png"
-                      title="SenesGroup.it"
-                      subtitle="Developed in React.js, with a responsive design showcasing their services. Clean UI & SEO-optimized."
+                      title={tproj("project3.title")}
+                      subtitle={tproj("project3.subtitle")}
                       skills={['React', 'TypeScript', 'SEO', 'CSS', 'Fastify']}
                       link="https://github.com/Z3roS4n/Development-Web-APIs"
-                      viewOn="View Website"
+                      viewOn={tproj("project3.viewOn")}
                       direction="right"
                     />
                   </div>
                 </section>
                 <section id="contact" className="flex flex-col self-center-safe lg:w-5/10 w-7/10">
                   <AnimatedHeadline
-                    title="Let's get in touch"
+                    title={t("contact.title")}
                     className="scroll-m-20 pb-2 text-5xl font-semibold tracking-tight first:mt-0"
                   />
                   <div className="flex flex-col gap-2">
                     <Contact direction="right"/>
                   </div>
-
+                  
                 </section>
+                <Footer/>
               </div>
-              <Footer></Footer>
             </div>
           </div>
         </div>
