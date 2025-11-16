@@ -1,6 +1,6 @@
 # murabito.eu-revamp 🚀
 
-This repository contains a complete revamp of my personal portfolio website built with Next.js, TypeScript (TSX), the App Router, and Tailwind CSS. The project aims to showcase projects, skills and contact information with a modern responsive design.
+This repository contains a complete revamp of my personal portfolio website built with Next.js, NextIntl (for multi-language support), TypeScript (TSX), the App Router, and Tailwind CSS. The project aims to showcase projects, skills and contact information with a modern responsive design.
 
 ---
 
