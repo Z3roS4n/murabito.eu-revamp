@@ -8,7 +8,6 @@ import AnimatedHeadline from "@/components/ui/animated-headline";
 import Experience from "@/components/layout/Experience";
 import Project from "@/components/layout/Project";
 import Contact from "@/components/layout/Contact";
-import CookieBanner from "@/components/layout/CookieBanner";
 import Footer from "@/components/layout/Footer";
 import { getTranslations } from "next-intl/server";
 
@@ -202,7 +201,7 @@ export default async function Home() {
                       image="Forum.png"
                       title={tproj("project1.title")}
                       subtitle={tproj("project1.subtitle")}
-                      skills={['Next.js', 'TypeScript', 'Supabase', 'TailwindCSS', 'Clerk', 'PrismaORM']}
+                      skills={['Next.js', 'TypeScript', 'Supabase', 'TW-CSS', 'Clerk', 'Prisma']}
                       link="https://github.com/Z3roS4n/NextJS-Forum-Website"
                       viewOn={tproj("project1.viewOn")}
                       direction="right"
@@ -211,7 +210,7 @@ export default async function Home() {
                       image="RAG.png"
                       title={tproj("project2.title")}
                       subtitle={tproj("project2.subtitle")}
-                      skills={['OpenAI', 'Prisma', 'Next.js', 'RAG', 'REST', 'PostgreSQL', 'Better-Auth']}
+                      skills={['OpenAI', 'Prisma', 'Next.js', 'RAG', 'PostgreSQL']}
                       link="https://github.com/Z3roS4n/ms-rag-demo"
                       viewOn={tproj("project2.viewOn")}
                       direction="right"

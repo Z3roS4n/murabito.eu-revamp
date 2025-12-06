@@ -110,6 +110,62 @@
         "savePreferences": "Save preferences",
         "cancel": "Cancel"
       }
+    },
+    "privacyPolicy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last Updated: December 6, 2025",
+      "intro": "Welcome to murabito.eu (hereinafter the \"Site\"). This policy describes how the site manages the personal data of users who visit it, in accordance with EU Regulation 2016/679 (GDPR).",
+      "section1": {
+        "title": "1. Data Controller",
+        "content": "The Data Controller is:",
+        "owner": "Antonio Cirino Murabito",
+        "address": "Address: Via Passo d'Api, 61, 90046, Monreale (PA)",
+        "fiscalCode": "Tax Code: MRBNNC06A05L407Y",
+        "vat": "VAT Number: 07344720821",
+        "contacts": "Contacts:",
+        "email": "Email: antoniomurabito4@gmail.com",
+        "pec": "PEC: antonio.murabito@pec.it"
+      },
+      "section2": {
+        "title": "2. Types of Data Collected and Purposes",
+        "subsectionA": {
+          "title": "A. Browsing Data (Vercel Analytics)",
+          "content": "To analyze the Site's performance and improve its usability, we use the Vercel Analytics service provided by Vercel Inc.",
+          "privacyFriendly": "This tool is configured to be privacy-friendly:",
+          "point1": "It does not use tracking cookies.",
+          "point2": "It does not collect personally identifiable information (PII).",
+          "point3": "The visitor's IP address is anonymized or discarded immediately after determining the general geographic location (Country/Region).",
+          "point4": "The data collected includes technical information such as: browser type, operating system, device type, and page loading times.",
+          "purpose": "Purpose: Anonymous statistics and technical performance monitoring.",
+          "legalBasis": "Legal Basis: Legitimate interest of the Data Controller (Art. 6(1)(f) GDPR)."
+        },
+        "subsectionB": {
+          "title": "B. Data Voluntarily Provided by the User",
+          "content": "The optional, explicit, and voluntary sending of email to the addresses indicated on this site entails the subsequent acquisition of the sender's address, necessary to respond to requests, as well as any other personal data included in the message.",
+          "purpose": "Purpose: To respond to contact or support requests.",
+          "legalBasis": "Legal Basis: Performance of pre-contractual or contractual measures taken at the request of the data subject."
+        }
+      },
+      "section3": {
+        "title": "3. Cookie Policy",
+        "content": "This site does not use cookies for user profiling, nor does it employ other invasive tracking methods. Since Vercel Analytics operates in \"cookieless\" mode (without cookies), no technical or statistical cookies are installed on the user's device for analysis purposes."
+      },
+      "section4": {
+        "title": "4. Methods and Place of Processing",
+        "content": "The processing related to the web services of this site takes place at the Data Controller's premises and is managed only by the Data Controller.",
+        "vercelInfo": "Regarding technical analysis data, the hosting provider Vercel Inc. is based in the United States. Data may be processed on US servers. Vercel ensures data protection through standard contractual clauses and adequate security measures in accordance with international standards."
+      },
+      "section5": {
+        "title": "5. Retention Period",
+        "contactData": "Contact Data: Personal data provided via email will be retained for the time strictly necessary to manage the request or for legal obligations (e.g., 10 years for correspondence with tax/legal relevance, if applicable).",
+        "analyticsData": "Statistical Data: The data on Vercel Analytics is aggregated and anonymous."
+      },
+      "section6": {
+        "title": "6. Rights of Data Subjects",
+        "content": "As a data subject, you have the right at any time to obtain confirmation of the existence or otherwise of such data and to know its content and origin, verify its accuracy, or request its integration, updating, or rectification (Art. 15 et seq. GDPR).",
+        "additionalRights": "You also have the right to request deletion, transformation into anonymous form, or blocking of data processed in violation of the law, as well as to object in any case, for legitimate reasons, to its processing.",
+        "contactInfo": "Requests should be addressed to the Data Controller by writing to: antoniomurabito4@gmail.com or via PEC to antonio.murabito@pec.it."
+      }
     }
   }
 }

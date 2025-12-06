@@ -110,6 +110,62 @@
         "savePreferences": "Salva preferenze",
         "cancel": "Annulla"
       }
+    },
+    "privacyPolicy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Ultimo aggiornamento: 06 Dicembre 2025",
+      "intro": "Benvenuto su murabito.eu (di seguito il \"Sito\"). Questa informativa descrive le modalità di gestione del sito in riferimento al trattamento dei dati personali degli utenti che lo consultano, ai sensi del Regolamento UE 2016/679 (GDPR).",
+      "section1": {
+        "title": "1. Titolare del Trattamento",
+        "content": "Il Titolare del trattamento dei dati è:",
+        "owner": "Antonio Cirino Murabito",
+        "address": "Sede: Via Passo d'Api, 61, 90046, Monreale (PA)",
+        "fiscalCode": "Codice Fiscale: MRBNNC06A05L407Y",
+        "vat": "Partita IVA: 07344720821",
+        "contacts": "Contatti:",
+        "email": "Email: antoniomurabito4@gmail.com",
+        "pec": "PEC: antonio.murabito@pec.it"
+      },
+      "section2": {
+        "title": "2. Tipologia di dati raccolti e finalità",
+        "subsectionA": {
+          "title": "A. Dati di navigazione (Vercel Analytics)",
+          "content": "Per analizzare le prestazioni del Sito e migliorarne l'usabilità, utilizziamo il servizio Vercel Analytics fornito da Vercel Inc.",
+          "privacyFriendly": "Questo strumento è configurato per essere rispettoso della privacy (Privacy-Friendly):",
+          "point1": "Non utilizza cookie di tracciamento.",
+          "point2": "Non raccoglie dati personali identificabili (PII).",
+          "point3": "L'indirizzo IP del visitatore viene anonimizzato o scartato immediatamente dopo aver determinato la posizione geografica generica (Paese/Regione).",
+          "point4": "I dati raccolti includono informazioni tecniche come: tipo di browser, sistema operativo, tipo di dispositivo e tempi di caricamento delle pagine.",
+          "purpose": "Finalità: Statistica anonima e monitoraggio delle prestazioni tecniche.",
+          "legalBasis": "Base giuridica: Legittimo interesse del Titolare (Art. 6(1)(f) GDPR)."
+        },
+        "subsectionB": {
+          "title": "B. Dati forniti volontariamente dall'utente",
+          "content": "L'invio facoltativo, esplicito e volontario di posta elettronica agli indirizzi indicati su questo sito comporta la successiva acquisizione dell'indirizzo del mittente, necessario per rispondere alle richieste, nonché degli eventuali altri dati personali inseriti nella missiva.",
+          "purpose": "Finalità: Rispondere alle richieste di contatto o di supporto.",
+          "legalBasis": "Base giuridica: Esecuzione di misure precontrattuali o contrattuali adottate su richiesta dell'interessato."
+        }
+      },
+      "section3": {
+        "title": "3. Cookie Policy",
+        "content": "Questo sito non fa uso di cookie per la profilazione degli utenti, né vengono impiegati altri metodi di tracciamento invasivi. Poiché Vercel Analytics opera in modalità \"cookieless\" (senza cookie), non viene installato alcun cookie tecnico o statistico sul dispositivo dell'utente per fini di analisi."
+      },
+      "section4": {
+        "title": "4. Modalità e luogo del trattamento",
+        "content": "I trattamenti connessi ai servizi web di questo sito hanno luogo presso la sede del Titolare e sono curati solo dal Titolare stesso.",
+        "vercelInfo": "Per quanto riguarda i dati di analisi tecnica, il fornitore di hosting Vercel Inc. ha sede negli Stati Uniti. I dati potrebbero essere elaborati su server statunitensi. Vercel assicura la protezione dei dati tramite clausole contrattuali standard e misure di sicurezza adeguate in conformità con gli standard internazionali."
+      },
+      "section5": {
+        "title": "5. Periodo di conservazione",
+        "contactData": "Dati di Contatto: I dati personali forniti via email verranno conservati per il tempo strettamente necessario a gestire la richiesta o per adempimenti di legge (es. 10 anni per la corrispondenza con rilevanza fiscale/giuridica, se applicabile).",
+        "analyticsData": "Dati Statistici: I dati presenti su Vercel Analytics sono aggregati e anonimi."
+      },
+      "section6": {
+        "title": "6. Diritti degli interessati",
+        "content": "In qualità di interessato, hai il diritto in qualunque momento di ottenere la conferma dell'esistenza o meno dei medesimi dati e di conoscerne il contenuto e l'origine, verificarne l'esattezza o chiederne l'integrazione o l'aggiornamento, oppure la rettificazione (artt. 15 e ss. GDPR).",
+        "additionalRights": "Hai inoltre il diritto di chiedere la cancellazione, la trasformazione in forma anonima o il blocco dei dati trattati in violazione di legge, nonché di opporti in ogni caso, per motivi legittimi, al loro trattamento.",
+        "contactInfo": "Le richieste vanno rivolte al Titolare scrivendo a: antoniomurabito4@gmail.com o via PEC a antonio.murabito@pec.it."
+      }
     }
   }
 }
