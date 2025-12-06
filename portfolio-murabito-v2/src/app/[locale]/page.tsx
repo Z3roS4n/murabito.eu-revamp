@@ -8,7 +8,6 @@ import AnimatedHeadline from "@/components/ui/animated-headline";
 import Experience from "@/components/layout/Experience";
 import Project from "@/components/layout/Project";
 import Contact from "@/components/layout/Contact";
-import CookieBanner from "@/components/layout/CookieBanner";
 import Footer from "@/components/layout/Footer";
 import { getTranslations } from "next-intl/server";
 

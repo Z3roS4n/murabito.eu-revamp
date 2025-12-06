@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import AnimatedHeadline from "@/components/ui/animated-headline";
 import Footer from "@/components/layout/Footer";
+import Link from "next/link";
 
 export const metadata = {
   title: 'Privacy Policy — Antonio Murabito',
@@ -190,12 +191,12 @@ export default async function PrivacyPolicy() {
 
           {/* Back to home link */}
           <div className="mt-12 text-center">
-            <a
+            <Link
               href="/"
               className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors font-semibold"
             >
               ← Torna alla Home / Back to Home
-            </a>
+            </Link>
           </div>
         </div>
       </main>
