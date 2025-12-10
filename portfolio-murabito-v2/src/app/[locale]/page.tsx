@@ -201,7 +201,7 @@ export default async function Home() {
                       image="Forum.png"
                       title={tproj("project1.title")}
                       subtitle={tproj("project1.subtitle")}
-                      skills={['Next.js', 'TypeScript', 'Supabase', 'TW-CSS', 'Clerk', 'Prisma']}
+                      skills={['Next.js', 'TS', 'Supabase', 'TW-CSS', 'Prisma']}
                       link="https://github.com/Z3roS4n/NextJS-Forum-Website"
                       viewOn={tproj("project1.viewOn")}
                       direction="right"
