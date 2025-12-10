@@ -13,7 +13,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export interface IProject {
-  image: string;
+  image?: string;
   title: string;
   subtitle: string;
   description?: string;
@@ -48,9 +48,9 @@ const Project = ({ image, title, subtitle, description, skills, direction = 'lef
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: animationDirection }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <SpotlightCard className="dark:bg-black w-full h-100" spotlightColor="34, 150, 238">
+          <SpotlightCard className="dark:bg-black w-full h-120" spotlightColor="34, 150, 238">
             <div className="w-full h-full flex flex-col items-center gap-2">
-              <Image src={`/projects/${image}`} height={300} width={300} className="w-full h-35 rounded-md" alt="project"></Image>
+              {image && <Image src={`/projects/${image}`} height={300} width={300} className="w-full h-35 rounded-md" alt="project"></Image>}
               <h3 className="text-xl font-semibold mb-0 self-center">{title}</h3>
               <p className="font-light" >{subtitle}</p>
             </div>
@@ -58,7 +58,7 @@ const Project = ({ image, title, subtitle, description, skills, direction = 'lef
               initial={{ opacity: 0, y: -20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-col justify-center">
+              className="flex flex-col justify-center gap-5">
               <div>
                 <Link href={link} className="bg-clip-text text-transparent bg-gradient-to-l dark:from-blue-300 from-blue-700 to-blue-500 font-semibold">{viewOn}</Link>
               </div>
