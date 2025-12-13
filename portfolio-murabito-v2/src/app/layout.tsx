@@ -7,6 +7,7 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
+import { usePathname } from 'next/navigation';
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -21,8 +22,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+  const locale = pathname?.startsWith('/it') ? 'it' : 'en';
+
   return (
-    <html lang="en" suppressHydrationWarning className={`${montserrat.variable} antialiased`}>
+    <html lang={locale} suppressHydrationWarning className={`${montserrat.variable} antialiased`}>
+      <head>
+        <link rel="canonical" href="https://murabito.eu" />
+        <meta name="geo.region" content="IT-PA" />
+        <meta name="geo.placename" content="Palermo" />
+        <meta name="geo.position" content="38.1157;13.3615" />
+        <meta name="ICBM" content="38.1157, 13.3615" />
+        <meta name="google-site-verification" content="jhF6j0WF4uRLmfMUlOg6u8bgx68LIU5PBHmGWmZRGTw" />
+      </head>
       <body className="overflow-x-hidden">
         <Analytics/>
         <QueryClientProvider client={queryClient}>

@@ -2,6 +2,7 @@ import {NextIntlClientProvider} from 'next-intl';
 import Navbar from '@/components/layout/navbar';
 import Footer from '@/components/layout/Footer';
 import { CookieProvider } from '@/context/CookieContext';
+import StructuredData from '@/components/layout/StructuredData';
  
 type Props = {
   children: React.ReactNode;
@@ -15,6 +16,7 @@ export default async function LocaleLayout({children, params}: Props) {
   return (
     <NextIntlClientProvider locale={locale}>
       <CookieProvider>
+        <StructuredData />
         <div className="transition-all duration-100 min-h-screen bg-primary-foreground">
           <div className="w-full flex justify-center">
             <Navbar />

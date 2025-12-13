@@ -1,0 +1,37 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Allow: /en
+Allow: /it
+Allow: /#aboutme
+Allow: /#projects
+Allow: /#contact
+
+Disallow: /api/
+Disallow: /privacy-policy/
+
+# Crawl-delay for all bots (optional)
+Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://murabito.eu/sitemap.xml
+
+# Specific bot rules
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Block common bad bots
+User-agent: AhrefsBot
+Crawl-delay: 30
+
+User-agent: SemrushBot
+Crawl-delay: 30
+
+User-agent: DotBot
+Crawl-delay: 30
