@@ -61,7 +61,6 @@ export const CookieProvider = ({ children }: { children: ReactNode }) => {
 
   return (
     <CookieContext.Provider value={{ consent, preferences, acceptCookies, rejectCookies, setCookiePreferences }}>
-      <CookieBanner></CookieBanner>
       {children}
     </CookieContext.Provider>
   );

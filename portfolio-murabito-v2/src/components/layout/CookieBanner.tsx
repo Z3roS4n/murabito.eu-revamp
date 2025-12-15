@@ -11,8 +11,6 @@ import { useTranslations } from "next-intl";
 
 const CookieBanner = () => {
   const containerRef = useRef<HTMLElement>(null);
-  const isInView = useInView(containerRef, { margin: "-100px" });
-  const animationDirection = 40;
 
   const t = useTranslations("homepage.cookieBanner");
   const tpref = useTranslations("homepage.cookieBanner.preferences");
@@ -49,22 +47,11 @@ const CookieBanner = () => {
   };
 
   return (
-    <motion.section
-      ref={containerRef}
-      initial={{ opacity: 0 }}
-      animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-      transition={{ duration: 0.8 }}
-      className="fixed z-100 bottom-0 right-0 lg:w-1/4 w-full flex justify-end"
-    >
-      <motion.div
-        className={cn("text-center m-4")}
-        initial={{ opacity: 0, y: -20 }}
-        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: animationDirection }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-      >
+    <div className="fixed z-100 lg:w-1/4 bottom-0 right-0 flex items-center">
+      <div className="text-center m-4 w-90">
         {showBanner && !showPreferences ? (
           <SpotlightCard className="dark:bg-black h-full" spotlightColor="34, 150, 238">
-            <div className="flex flex-col gap-3 p-4">
+            <div className="flex flex-col gap-3">
               <h3 className="text-lg font-semibold">{t("title")}</h3>
                 <p className="text-sm text-muted-foreground">
                   {t("description")}
@@ -141,8 +128,8 @@ const CookieBanner = () => {
             <Cookie />
           </SpotlightCard>
         )}
-      </motion.div>
-    </motion.section>
+      </div>
+    </div>
   );
 };
 
