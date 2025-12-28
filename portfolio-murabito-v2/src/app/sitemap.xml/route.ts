@@ -8,17 +8,29 @@ export async function GET() {
   ];
   */
 
-  const staticRoutes = ["", "#projects", "#contact", "#projects", "/privacy-policy"];
+  const staticRoutes = [
+    { path: "", priority: "1.0", changefreq: "weekly" },
+    { path: "/en", priority: "1.0", changefreq: "weekly" },
+    { path: "/it", priority: "1.0", changefreq: "weekly" },
+    { path: "/#aboutme", priority: "0.9", changefreq: "monthly" },
+    { path: "/#projects", priority: "0.9", changefreq: "weekly" },
+    { path: "/#contact", priority: "0.8", changefreq: "monthly" },
+    { path: "/privacy-policy", priority: "0.3", changefreq: "yearly" },
+  ];
 
   const allRoutes = [
     ...staticRoutes.map((route) => ({
-      loc: `${baseUrl}${route}`,
+      loc: `${baseUrl}${route.path}`,
       lastmod: new Date().toISOString(),
+      priority: route.priority,
+      changefreq: route.changefreq,
     })),
     /*
     ...posts.map((post) => ({
       loc: `${baseUrl}/blog/${post.slug}`,
       lastmod: post.updatedAt,
+      priority: "0.7",
+      changefreq: "monthly",
     })),
     */
   ];
@@ -31,6 +43,8 @@ export async function GET() {
       <url>
         <loc>${route.loc}</loc>
         <lastmod>${route.lastmod}</lastmod>
+        <changefreq>${route.changefreq}</changefreq>
+        <priority>${route.priority}</priority>
       </url>`
       )
       .join("")}

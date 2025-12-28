@@ -9,17 +9,17 @@
     "hero": {
       "headline": "I transform your ideas into",
       "typewriterWords": "websites, real products, experiences, digital solutions, useful tools, extraordinary designs",
-      "description": "I create modern and high-performance web applications, where clean code meets refined design. From frontend to backend, I turn ideas into engaging digital experiences.",
+      "description": "Web Developer based in Palermo, Italy, working throughout the country. I create modern and high-performance web applications with Next.js, React, and TypeScript. From frontend to backend, I turn your ideas into engaging digital experiences.",
       "scrollDown": "Scroll down"
     },
     "about": {
-      "title": "I’m Antonio Murabito",
+      "title": "I'm Antonio Murabito",
       "your": "your",
-      "typewriterWords": "Web Developer, Graphic Designer",
-      "bio": "Web developer and graphic designer. I blend code and creativity to bring compelling digital experiences and effective visuals to life.",
-      "description": "I’m at my best where code meets creativity, turning ideas into visuals and interactive interfaces that communicate more than words ever could. From clean designs to bold branding, I make your digital presence memorable, meaningful, and unmistakable.",
+      "typewriterWords": "Web Developer in Palermo, Graphic Designer",
+      "bio": "Full stack web developer and graphic designer based in Palermo, Sicily. I blend code and creativity to bring compelling digital experiences and effective visuals to life for clients throughout Italy.",
+      "description": "I'm at my best where code meets creativity, turning ideas into visuals and interactive interfaces that communicate more than words ever could. From clean designs to bold branding, I make your digital presence memorable, meaningful, and unmistakable. I work with businesses and professionals from Palermo to all over Italy.",
       "highlightWords": "creativity, experiences, memorable",
-      "position": "Full Stack Web Developer",
+      "position": "Full Stack Web Developer - Palermo, Italy",
       "github": "GitHub Profile",
       "instagram": "Instagram Profile"
     },
@@ -70,7 +70,7 @@
     },
     "contact": {
       "title": "Get in Touch",
-      "description": "Contact me for collaborations, freelance projects, or to bring your creative idea to life.",
+      "description": "Do you have a project in mind? I'm available for collaborations and freelance projects throughout Italy. Contact me to turn your idea into digital reality.",
       "form": {
         "title": "Describe Your Project",
         "subject": "Subject",

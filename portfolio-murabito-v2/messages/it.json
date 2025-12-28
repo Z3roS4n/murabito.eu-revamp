@@ -9,17 +9,17 @@
     "hero": {
       "headline": "Trasformo le tue idee in",
       "typewriterWords": "siti web, prodotti reali, esperienze, soluzioni digitali, strumenti utili, design straordinari",
-      "description": "Realizzo applicazioni web moderne e performanti, dove il codice pulito incontra un design curato. Dal frontend al backend, trasformo le idee in esperienze digitali coinvolgenti.",
+      "description": "Web Developer a Palermo, operativo in tutta Italia. Realizzo applicazioni web moderne e performanti con Next.js, React e TypeScript. Dal frontend al backend, trasformo le tue idee in esperienze digitali coinvolgenti.",
       "scrollDown": "Scorri in basso"
     },
     "about": {
       "title": "Sono Antonio Murabito",
       "your": "il tuo",
-      "typewriterWords": "Web Developer, Graphic Designer",
-      "bio": "Sviluppatore web e graphic designer. Unisco codice e creatività per dare vita a esperienze digitali coinvolgenti e visual efficaci.",
-      "description": "Mi trovo a mio agio dove il codice incontra la creatività, trasformando le idee in visual e interfacce interattive che comunicano più di mille parole. Dai design puliti ai brand audaci, rendo la tua presenza digitale memorabile, significativa e inconfondibile.",
+      "typewriterWords": "Web Developer a Palermo, Graphic Designer",
+      "bio": "Sviluppatore web full stack e graphic designer con base a Palermo, Sicilia. Unisco codice e creatività per dare vita a esperienze digitali coinvolgenti e visual efficaci per clienti in tutta Italia.",
+      "description": "Mi trovo a mio agio dove il codice incontra la creatività, trasformando le idee in visual e interfacce interattive che comunicano più di mille parole. Dai design puliti ai brand audaci, rendo la tua presenza digitale memorabile, significativa e inconfondibile. Lavoro con aziende e professionisti da Palermo a tutta Italia.",
       "highlightWords": "creatività, esperienze, memorabile",
-      "position": "Full Stack Web Developer",
+      "position": "Full Stack Web Developer - Palermo, Italia",
       "github": "Profilo GitHub",
       "instagram": "Profilo Instagram"
     },
@@ -70,7 +70,7 @@
     },
     "contact": {
       "title": "Rimaniamo in contatto",
-      "description": "Contattami per collaborazioni, progetti freelance o per dare vita a una tua idea creativa.",
+      "description": "Hai un progetto in mente? Sono disponibile per collaborazioni e progetti freelance in tutta Italia. Contattami per trasformare la tua idea in realtà digitale.",
       "form": {
         "title": "Descrivi il tuo progetto",
         "subject": "Oggetto",

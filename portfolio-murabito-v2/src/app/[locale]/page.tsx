@@ -12,54 +12,84 @@ import Footer from "@/components/layout/Footer";
 import { getTranslations } from "next-intl/server";
 
 export const metadata = {
-  title: 'Antonio Murabito — Web Developer & Designer / Sviluppatore Web e Designer',
+  title: 'Antonio Murabito — Web Developer Palermo | Sviluppatore Web Italia',
   description:
-    "I build modern, performant web applications where clean code meets thoughtful design. From frontend to backend, I turn ideas into engaging digital experiences. — Costruisco applicazioni web moderne e performanti dove il codice pulito incontra il design: trasformo idee in esperienze digitali coinvolgenti.",
+    "Web Developer a Palermo, operativo in tutta Italia. Sviluppo applicazioni web moderne e performanti con Next.js, React, TypeScript. Soluzioni digitali personalizzate per aziende e professionisti. — I build modern web applications in Palermo and all over Italy, from frontend to backend.",
   keywords: [
     'Antonio Murabito',
-    'web developer',
-    'graphic designer',
+    'web developer Palermo',
+    'sviluppatore web Palermo',
+    'web developer Italia',
+    'sviluppatore web Italia',
+    'sviluppatore full stack Palermo',
+    'graphic designer Palermo',
     'TypeScript',
     'Next.js',
+    'React',
     'TailwindCSS',
-    'portfolio',
-    'sviluppatore web',
-    'designer'
+    'portfolio sviluppatore',
+    'freelance web developer',
+    'sviluppo siti web Palermo',
+    'sviluppo applicazioni web',
+    'siti web su misura',
+    'SEO Palermo',
+    'designer grafico Palermo'
   ],
   authors: [{ name: 'Antonio Murabito', url: 'https://murabito.eu' }],
   creator: 'Antonio Murabito',
   publisher: 'Antonio Murabito',
   metadataBase: new URL('https://murabito.eu'),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'google-site-verification-code',
+  },
+  other: {
+    'geo.region': 'IT-PA',
+    'geo.placename': 'Palermo',
+    'geo.position': '38.1157;13.3615',
+    'ICBM': '38.1157, 13.3615',
+  },
   openGraph: {
-    title: 'Antonio Murabito — Web Developer & Designer',
+    title: 'Antonio Murabito — Web Developer Palermo | Sviluppatore Web Italia',
     description:
-      'I build modern, performant web applications where clean code meets thoughtful design. / Costruisco applicazioni web moderne e performanti dove il codice pulito incontra il design.',
+      'Web Developer freelance a Palermo, operativo in tutta Italia. Specializzato nello sviluppo di applicazioni web moderne con Next.js, React e TypeScript. Soluzioni digitali personalizzate per la tua azienda.',
     url: 'https://murabito.eu',
-    siteName: 'murabito.eu',
+    siteName: 'Antonio Murabito - Web Developer',
     images: [
       {
         url: 'https://murabito.eu/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Antonio Murabito — Web Developer & Designer'
+        alt: 'Antonio Murabito — Web Developer Palermo, Sviluppatore Web Italia'
       }
     ],
-    locale: 'en_US',
-    type: 'website'
+    locale: 'it_IT',
+    type: 'website',
+    countryName: 'Italy',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Antonio Murabito — Web Developer & Designer',
+    title: 'Antonio Murabito — Web Developer Palermo | Sviluppatore Web Italia',
     description:
-      'I build modern, performant web applications where clean code meets thoughtful design. / Costruisco applicazioni web moderne e performanti dove il codice pulito incontra il design.',
+      'Web Developer freelance a Palermo, operativo in tutta Italia. Sviluppo applicazioni web moderne e performanti con Next.js, React, TypeScript.',
     images: ['https://murabito.eu/og-image.png'],
     creator: '@z3ros4n'
   },
   alternates: {
     canonical: 'https://murabito.eu',
     languages: {
-      'en-US': '/en',
-      'it-IT': '/it'
+      'en-US': 'https://murabito.eu/en',
+      'it-IT': 'https://murabito.eu/it'
     }
   }
 };
